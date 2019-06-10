@@ -1,6 +1,6 @@
 ## TATTEO PROJECT SETUP
 
-**Author**: Kenny Ward
+**Author**: Kenny Ward, Danny Smith.
 
 ## Prerequisites
 
