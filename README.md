@@ -1,6 +1,6 @@
 ## TATTEO PROJECT SETUP
 
-**Document Authors**: Kenny Ward, Danny Smith.
+**Author**: Kenny Ward, Danny Smith.
 
 ## Prerequisites
 
@@ -10,11 +10,11 @@ Install:
 -   Vagrant and VirtualBox
 -   [VVV](https://varyingvagrantvagrants.org/)
 
-To set up VVV, follow the [prerequisites](https://varyingvagrantvagrants.org/docs/en-US/installation/software-requirements/) here, including the Vagrant Hosts Updater plugin. (Note: it works with VirtualBox 6.x). Then follow the [installation instructions](https://varyingvagrantvagrants.org/docs/en-US/installation/).
+To set up VVV, follow the [prerequisites](https://varyingvagrantvagrants.org/docs/en-US/installation/software-requirements/) here, including the Vagrant Hosts Updater plugin. (Note: it works with VirtualBox 6.x). The follow the [installation instructions](https://varyingvagrantvagrants.org/docs/en-US/installation/).
 
 ## INSTALL WP ENVIROMENT
 
-Add the following to your vvv-custom.yml file, located in your VVV root (~/vagrant-local) ensuring you follow the same syntax as the example sites in the file. **Whitespace matters!**
+Add the following to your vvv-custom.yml file, located in your VVV root (~/vagrant-local) ensuring you follow the same syntax as the example sites in the file. whitespace matters!
 
 ```yaml
 tatteo:
@@ -59,7 +59,7 @@ Now **OUTSIDE THE VIRTUAL MACHINE** (in a new tab), run these commands:
 cd ~/vagrant-local/www/tatteo/public_html/wp-content/themes
 git clone https://github.com/redacademy/tatteo-q2-2019-theme.git tatteo
 cd tatteo
-git log # Check you can see previous commits from Danny and Kenny.
+git log # Check you can see commits from Danny.
 ```
 
 Now, back **INSIDE THE VIRTUAL MACHINE** run this command:
@@ -67,8 +67,6 @@ Now, back **INSIDE THE VIRTUAL MACHINE** run this command:
 ```shell
 wp theme activate tatteo
 ```
-
-Refresh your browser, you should now have the Tatteo theme installed and activated. Well done 🎉 Have a celebratory coffee.
 
 ## INSTALL TEST DATA
 
