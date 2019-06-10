@@ -1,10 +1,12 @@
-## TATTEO PROJECT SETUP
+# TATTEO PROJECT
 
-**Author**: Kenny Ward, Danny Smith.
+This is the 🎨 _theme_ repo for the **Tatteo** Community Partner progect at RED Academy.
+
+**Authors**: Kenny Ward, Danny Smith.
+
+# Installation and Setup
 
 ## Prerequisites
-
-Install:
 
 -   Git
 -   Vagrant and VirtualBox
@@ -14,7 +16,7 @@ To set up VVV, follow the [prerequisites](https://varyingvagrantvagrants.org/doc
 
 ## INSTALL WP ENVIROMENT
 
-Add the following to your vvv-custom.yml file, located in your VVV root (~/vagrant-local) ensuring you follow the same syntax as the example sites in the file. whitespace matters!
+Add the following to your vvv-custom.yml file, located in your VVV root (`~/vagrant-local`) ensuring you follow the same syntax as the example sites in the file. whitespace matters!
 
 ```yaml
 tatteo:
@@ -24,7 +26,7 @@ tatteo:
         - tatteo.test
 ```
 
-Save the file, run the following from your VVV root (~/vagrant-local)
+Save the file, run the following from your VVV root (`~/vagrant-local`)
 
 ```shell
 vagrant provision
