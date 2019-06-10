@@ -1,47 +1,91 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+## TATTEO PROJECT SETUP
 
-_s
-===
+**Author**: Kenny Ward
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+## Prerequisites
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+Install:
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-Note: `.no-sidebar` styles are not automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+-   Git
+-   Vagrant and VirtualBox
+-   [VVV](https://varyingvagrantvagrants.org/)
 
-Getting Started
----------------
+## INSTALL WP ENVIROMENT
 
-If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+Add the following to your vvv-custom.yml file, located in your VVV root (~/vagrant-local) ensuring you follow the same syntax as the example sites in the file. whitespace matters!
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a five-step find and replace on the name in all the templates.
+```yaml
+tatteo:
+    description: 'A custom WordPress theme for Tatteo'
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+        - tatteo.test
+```
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in `style.css`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+Save the file, run the following from your VVV root (~/vagrant-local)
 
-OR
+```shell
+vagrant provision
+```
 
-1. Search for: `'_s'` and replace with: `'megatherium-is-awesome'`.
-2. Search for: `_s_` and replace with: `megatherium_is_awesome_`.
-3. Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium-is-awesome` in `style.css`.
-4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for: `_s-` and replace with: `megatherium-is-awesome-`.
+When complete check http://tatteo.test in a browser. If you have any errors check and fix your syntax in `~/vagrant-local/vvv-custom.yml` and try running the above command again
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+## INSTALL PLUGINS
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+```shell
+# first, navigate to your VVV root
+cd ~/vagrant-local
 
-Good luck!
+# connect to the Vagrant VM via SSH
+vagrant ssh
+
+# Inside the virtual box, navigate to your WordPress site root
+cd /srv/www/tatteo
+
+# install and activate Regenerate Thumbnails
+wp plugin install regenerate-thumbnails --activate
+
+# install and activate Yoast SEO
+wp plugin install wordpress-seo --activate
+```
+
+## INSTALL TATTEO THEME
+
+Now **OUTSIDE THE VIRTUAL MACHINE** (in a new tab), run these commands:
+
+```shell
+## Switch
+cd ~/vagrant-local/www/tatteo/public_html/wp-content/themes
+git clone https://github.com/redacademy/tatteo-q2-2019-theme.git tatteo
+cd tatteo
+git log # Check you can see commits from Danny.
+
+```
+
+## INSTALL TEST DATA
+
+```shell
+# first, navigate to your VVV root
+cd ~/vagrant-local
+
+# connect to the Vagrant VM via SSH
+vagrant ssh
+
+# once connected, navigate to the WP site where you want to import the data e.g:
+cd ~/srv/www/tatteo/public_html
+
+# download the official WP theme test-data. NOTE: Ideally we'd create our own XML document with test data specific to the client project, sometimes this isn't possible so we use the WP data
+curl -O https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
+
+# install the offical WP importer plugin and activate with flag
+wp plugin install wordpress-importer --activate
+
+# import the data that you downloaded and create authors with flag
+wp import ./theme-unit-test-data.xml --authors=create
+
+# clean up - remove test data file. NOTE: Doesn't remove the actual test data from the database
+rm theme-unit-test-data.xml
+
+# clean up - remove importer plugin as it's not needed now
+wp plugin delete wordpress-importer
+```
