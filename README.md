@@ -61,6 +61,10 @@ cd tatteo
 git log # Check you can see commits from Danny.
 
 ```
+Now, **INSIDE THE VIRTUAL MACHINE** run this command:
+
+```shell
+wp theme activate tatteo
 
 ## INSTALL TEST DATA
 
