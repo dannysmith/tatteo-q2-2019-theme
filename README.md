@@ -54,7 +54,7 @@ wp plugin install wordpress-seo --activate
 Now **OUTSIDE THE VIRTUAL MACHINE** (in a new tab), run these commands:
 
 ```shell
-## Switch
+
 cd ~/vagrant-local/www/tatteo/public_html/wp-content/themes
 git clone https://github.com/redacademy/tatteo-q2-2019-theme.git tatteo
 cd tatteo
