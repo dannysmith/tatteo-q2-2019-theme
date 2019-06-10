@@ -10,7 +10,7 @@ Install:
 -   Vagrant and VirtualBox
 -   [VVV](https://varyingvagrantvagrants.org/)
 
-To set up VVV, follow the [prerequisites](https://varyingvagrantvagrants.org/docs/en-US/installation/software-requirements/) here, including the Vagrant Hosts Updater plugin. (Note: it works with VirtualBox 6.x). Then follow the [installation instructions](https://varyingvagrantvagrants.org/docs/en-US/installation/).
+To set up VVV, follow the [prerequisites](https://varyingvagrantvagrants.org/docs/en-US/installation/software-requirements/) here, including the Vagrant Hosts Updater plugin. (Note: it works with VirtualBox 6.x). Then follow the [installation instructions](https://varyingvagrantvagrants.org/docs/en-US/installation/) using the Git method.
 
 ## INSTALL WP ENVIROMENT
 
