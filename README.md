@@ -60,14 +60,15 @@ Now **OUTSIDE THE VIRTUAL MACHINE** (in a new tab), run these commands:
 ```shell
 cd ~/vagrant-local/www/tatteo/public_html/wp-content/themes
 git clone https://github.com/redacademy/tatteo-q2-2019-theme.git tatteo
-cd tatteo
+cd tatteo # Switch into the theme we just cloned
 git log # Check you can see commits from Danny.
 ```
 
-Now, back **INSIDE THE VIRTUAL MACHINE** run this command:
+Now, back **INSIDE THE VIRTUAL MACHINE** run these commands:
 
 ```shell
-wp theme activate tatteo
+cd /srv/www/tatteo # Change to tatteo project root
+wp theme activate tatteo # Activate the theme we just cloned down
 ```
 
 ## INSTALL TEST DATA
