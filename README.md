@@ -104,4 +104,4 @@ wp plugin delete wordpress-importer
 
 Any custom functionality that should be separate from the theme will be created in a plugin, these are listed below. All issues related to these plugins will be handled here in the theme's repository.
 
-- [Tatteo Custom Post Types](https://github.com/redacademy/tatteo-q2-2019-plugin-customposttypes, "Tatteo Custom Post Types")
+- [Tatteo Custom Post Types](https://github.com/redacademy/tatteo-q2-2019-plugin-customposttypes)
