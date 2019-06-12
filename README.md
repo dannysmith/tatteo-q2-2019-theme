@@ -99,3 +99,9 @@ rm theme-unit-test-data.xml
 # clean up - remove importer plugin as it's not needed now
 wp plugin delete wordpress-importer
 ```
+
+## PLUGINS
+
+Any custom functionality that should be separate from the theme will be created in a plugin, these are listed below. All issues related to these plugins will be handled here in the theme's repository.
+
+- [Tatteo Custom Post Types](https://github.com/redacademy/tatteo-q2-2019-plugin-customposttypes, "Tatteo Custom Post Types")
