@@ -1,5 +1,13 @@
+@import '../variables-site/typography';
+
+
+
+
 a {
-	color: $color__link;
+	text-decoration: none;
+	font-family: $font__main;
+
+	color: $color__link__black; // I only styled this here, because there is only one type of <a>
 
 	&:visited {
 		color: $color__link-visited;
@@ -16,4 +24,14 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+.white-link { // class for links that have a black background
+	color: $color__link__white;
 }
+
+.black-link { // class for links that have a white background
+	color: $color__link__black;
+}
+}
+
+
