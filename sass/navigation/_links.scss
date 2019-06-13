@@ -24,12 +24,13 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	&.white-link { // class for links that have a black background
+		color: $color__link-white;
+	}
+
+	&.black-link { // class for links that have a white background
+		color: $color__link-black;
+	}
 }
 
-a.white-link { // class for links that have a black background
-	color: $color__link-white;
-}
-
-a.black-link { // class for links that have a white background
-	color: $color__link-black;
-}
