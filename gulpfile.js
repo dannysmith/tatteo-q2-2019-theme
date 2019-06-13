@@ -78,8 +78,8 @@ gulp.task(
 
 gulp.task('watch', function() {
 	gulp.watch('js/*.js', gulp.series('scripts'));
-	gulp.watch('sass/*.scss', gulp.series('sass-min'));
-	gulp.watch('sass/*.scss', gulp.series('sass-full'));
+	gulp.watch('sass/*/*.scss', gulp.series('sass-min'));
+	gulp.watch('sass/*/*.scss', gulp.series('sass-full'));
 });
 
 gulp.task('default', gulp.parallel('watch'));
