@@ -81,4 +81,4 @@ gulp.task('watch', function() {
 	gulp.watch('sass/*/*.scss', gulp.series('sass-full'));
 });
 
-gulp.task('default', gulp.parallel('watch'));
+gulp.task('default', gulp.series('scripts', 'sass-min','sass-full'));
