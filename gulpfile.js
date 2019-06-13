@@ -10,7 +10,7 @@ const terser = require('gulp-terser');
 
 // Create basic Gulp tasks
 
-gulp.task('sass', function() {
+gulp.task('sass-min', function() {
 	return gulp
 		.src('./sass/style.scss', { sourcemaps: true })
 		.pipe(sourcemaps.init())
@@ -28,6 +28,20 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./build/css'));
 });
 
+gulp.task('sass-full', function() {
+	return gulp
+		.src('./sass/style.scss', { sourcemaps: true })
+		.pipe(sourcemaps.init())
+		.pipe(prettyError())
+		.pipe(sass())
+		.pipe(
+			autoprefixer({
+				browsers: ['last 2 versions']
+			})
+		)
+		.pipe(gulp.dest('./build/css'))
+});
+
 gulp.task('lint', function() {
 	return gulp
 		.src(['./js/*.js'])
@@ -37,9 +51,7 @@ gulp.task('lint', function() {
 		.pipe(eslint.failAfterError());
 });
 
-gulp.task(
-	'scripts',
-	gulp.series('lint', function() {
+gulp.task('scripts-min', function() {
 		return gulp
 			.src('./js/*.js')
 			.pipe(terser())
@@ -49,14 +61,26 @@ gulp.task(
 				})
 			)
 			.pipe(gulp.dest('./build/js'));
-	})
+	});
+
+gulp.task('scripts-full', function() {
+		return gulp
+			.src('./js/*.js')
+			.pipe(gulp.dest('./build/js'));
+	});
+
+
+gulp.task(
+	'scripts',
+	gulp.series('lint', 'scripts-full', 'scripts-min')
 );
 
 // Set-up BrowserSync and watch
 
 gulp.task('watch', function() {
 	gulp.watch('js/*.js', gulp.series('scripts'));
-	gulp.watch('sass/*.scss', gulp.series('sass'));
+	gulp.watch('sass/*.scss', gulp.series('sass-min'));
+	gulp.watch('sass/*.scss', gulp.series('sass-full'));
 });
 
 gulp.task('default', gulp.parallel('watch'));
