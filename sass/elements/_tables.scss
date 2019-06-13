@@ -1,4 +1,11 @@
+
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+table > thead > tr > th {
+	font-family: 'Roboto';
+	background-color: green($color)
 }

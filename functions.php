@@ -120,10 +120,16 @@ add_action( 'widgets_init', 'tatteo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tatteo_scripts() {
-	wp_enqueue_style( 'tatteo-style', get_stylesheet_uri() );
+
+	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.min.css', array());
+	wp_enqueue_style(
+		'inhabitents-fontawesome',
+		"https://use.fontawesome.com/releases/v5.8.2/css/all.css",
+		array()
+	);
 
 	wp_enqueue_script( 'tatteo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	
+
 	wp_enqueue_script( 'tatteo-css-vars-ponyfill', get_template_directory_uri() . '/js/css-vars-ponyfill.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'tatteo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

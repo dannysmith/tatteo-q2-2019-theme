@@ -1,5 +1,17 @@
-$font__main: sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+@font-face {
+    font-family: 'Bebas';
+    src: url('/fonts/bebas-accent/Bebas-Regular.eot');
+    src: url('/fonts/bebas-accent/Bebas-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/bebas-accent/Bebas-Regular.woff2') format('woff2'),
+        url('/fonts/bebas-accent/Bebas-Regular.woff') format('woff'),
+        url('/fonts/bebas-accent/Bebas-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$font__main: 'Roboto';
+$font__accent: 'Bebas';
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
