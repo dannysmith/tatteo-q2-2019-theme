@@ -1,5 +1,5 @@
 const autoprefixer = require('gulp-autoprefixer');
-coconst autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
