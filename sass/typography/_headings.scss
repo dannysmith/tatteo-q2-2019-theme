@@ -4,14 +4,8 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $font__main;
 	letter-spacing: .05em;
-	text-align: center;
 }
 
 h1 {
-	font-style: italic;
-	@include headings-box;
-}
-
-h2 {
-	@include headings-box;
+	font-family: $font__main;	
 }
