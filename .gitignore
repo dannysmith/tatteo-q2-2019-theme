@@ -33,3 +33,7 @@ access_log
 # Ignore packages #
 # =============== #
 node_modules/
+
+# Ignore build folder #
+# =================== #
+build/
