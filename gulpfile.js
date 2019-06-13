@@ -51,23 +51,22 @@ gulp.task('lint', function() {
 });
 
 gulp.task('scripts-min', function() {
-		return gulp
-			.src('./js/*.js')
-			.pipe(terser())
-			.pipe(
-				rename({
-					extname: '.min.js'
-				})
-			)
-			.pipe(gulp.dest('./build/js'));
-	});
+	return gulp
+		.src('./js/*.js')
+		.pipe(terser())
+		.pipe(
+			rename({
+				extname: '.min.js'
+			})
+		)
+		.pipe(gulp.dest('./build/js'));
+});
 
 gulp.task('scripts-full', function() {
 		return gulp
 			.src('./js/*.js')
 			.pipe(gulp.dest('./build/js'));
 	});
-
 
 gulp.task(
 	'scripts',
