@@ -1,4 +1,11 @@
+@import '../typography/typography';
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+table > thead > tr > th {
+	font-family: $font__accent;
+	background-color: green;
 }
