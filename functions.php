@@ -121,10 +121,10 @@ add_action( 'widgets_init', 'tatteo_widgets_init' );
  */
 function tatteo_scripts() {
 
-	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.min.css', array());
-	
-	wp_enqueue_style( 'tatteo-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,700italic,400,700,300', false ); 
-	
+	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
+
+	wp_enqueue_style( 'tatteo-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,700italic,400,700,300', false );
+
 	wp_enqueue_style(
 		'inhabitents-fontawesome',
 		"https://use.fontawesome.com/releases/v5.8.2/css/all.css",
