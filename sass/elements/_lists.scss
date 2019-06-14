@@ -5,7 +5,7 @@ ul, ol {
 	}
 }
 
-ul {
+ul.square-bullet-list { //this styles any UL with bullet points
 	list-style: disc;
 	list-style-type:none;
 	li:before { //this styles the little tick boxes next to the list items
@@ -19,8 +19,12 @@ ul {
 		border: 4px solid #000000;
 	}
 	li:hover:before{
-		background-color:#000000 ;
+		background-color:#000000;
 	}
+}
+
+ul { // this styles any UL without bullet points
+	list-style-type:none;
 }
 
 ol {
