@@ -37,11 +37,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$tatteo_description = get_bloginfo( 'description', 'display' );
-			if ( $tatteo_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $tatteo_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -53,6 +49,10 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+		
+		<nav class="secondary-navigation">
+			secondary nav
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
