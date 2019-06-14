@@ -20,6 +20,7 @@
 			}
 
 			li {
+				width: max-content;
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -27,7 +28,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: min-content;
 			}
 
 			:hover > a,
