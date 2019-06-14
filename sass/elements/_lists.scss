@@ -18,6 +18,7 @@ li > ol {
 
 dt {
 	font-weight: bold;
+	@include headings-box;
 }
 
 dd {
