@@ -26,22 +26,23 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+			<?php if (has_custom_logo()) {
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$image = wp_get_attachment_image( $custom_logo_id , 'site-logo' ); ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<?php echo $image; ?>
+				</a>
+				<?php } else {
+					if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php endif;
+				}
 			?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tatteo' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -51,7 +52,30 @@
 		</nav><!-- #site-navigation -->
 		
 		<nav class="secondary-navigation">
-			secondary nav
+			<div class="search-reveal">
+				<?php get_search_form(); ?>
+			</div>
+			<div class="user-login">
+				<?php 
+				if ( is_user_logged_in() ) { 
+				$currentUser = wp_get_current_user();
+				$editUserProfile = get_edit_profile_url(); ?>
+					<a href="<?php echo $editUserProfile; ?>" class="user-avatar" style="background-image: url(<?php echo esc_url( get_avatar_url( $currentUser->ID ) ); ?>)">
+						My account
+					</a>
+				<?php } else { ?>
+					<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">
+						Login
+					</a>
+				<?php } ?>		
+			</div>
+			<div class="nav-toggle">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</div>						
+			
 		</nav>
 	</header><!-- #masthead -->
 
