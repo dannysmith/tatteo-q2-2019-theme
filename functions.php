@@ -41,7 +41,7 @@ if ( ! function_exists( 'tatteo_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-
+		
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'tatteo' ),
@@ -68,16 +68,16 @@ if ( ! function_exists( 'tatteo_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Set theme image sizes
+		add_image_size( 'site-logo', 99999, 60, false ); // 60 pixels height (and unlimited width)
+
 		/**
 		 * Add support for core custom logo.
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
+			'size' => 'site-logo'
 		) );
 	}
 endif;
@@ -121,19 +121,15 @@ add_action( 'widgets_init', 'tatteo_widgets_init' );
  */
 function tatteo_scripts() {
 
-	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
+	wp_enqueue_style( 'tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
 
-	wp_enqueue_style( 'tatteo-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,700italic,400,700,300', false );
+	wp_enqueue_style( 'tatteo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap', false );
 
-	wp_enqueue_style(
-		'inhabitents-fontawesome',
-		"https://use.fontawesome.com/releases/v5.8.2/css/all.css",
-		array()
-	);
+	wp_enqueue_style( 'inhabitents-fontawesome', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css', array());
 
-	wp_enqueue_script( 'tatteo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'tatteo-css-vars-ponyfill', get_template_directory_uri() . '/js/css-vars-ponyfill.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'tatteo-toggle-menu', get_template_directory_uri() . '/js/toggle-menu.js', array(), '20151215', true );
+	
+	wp_enqueue_script( 'tatteo-search-reveal', get_template_directory_uri() . '/js/search-reveal.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'tatteo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

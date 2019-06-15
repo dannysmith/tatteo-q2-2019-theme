@@ -2,12 +2,12 @@
 
 #page {
     display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-gap: $layout__indent-small;    
     grid-template-areas: 
     	"header header header" 
     	"article article article" 
     	"footer footer footer";
-    grid-template-columns: 25% 1fr 25%;
-    grid-gap: $layout__indent-large;
     
 	#masthead {
 	    grid-area: header;

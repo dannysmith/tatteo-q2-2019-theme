@@ -2,7 +2,7 @@
 
 p {
 	font-family: $font__main;
-	letter-spacing: .05em;
+	letter-spacing: $font__letter-spacing;	
 }
 
 dfn, cite, em, i {

@@ -36,4 +36,4 @@ node_modules/
 
 # Ignore build folder #
 # =================== #
-build/
+/build/*
