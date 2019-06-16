@@ -1,0 +1,47 @@
+@import '../variables-site/variables-site';
+
+#colophon {
+	background-color: $color__background-footer;
+	color: $color__text-footer;
+	padding: $layout__indent-large	$layout__indent-small;
+	
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding: $layout__indent-large 0;
+		
+		.site-info,
+		.site-social {
+			max-width: 250px;
+			@include font-size(.8);
+			
+			a {
+				@include font-size(.8);
+			}			
+			
+			li {
+				margin-bottom: 5px;
+			}
+		}
+		
+		.site-info {
+			ul {
+				margin: 10px 0;
+			}
+		}
+		
+		.site-social {
+			text-align: right;
+
+		}
+	}
+	
+	a {
+		color: $color__text-footer;
+	}
+	
+	ul.menu {
+		padding: 0;
+		margin: 0;
+	}
+}
