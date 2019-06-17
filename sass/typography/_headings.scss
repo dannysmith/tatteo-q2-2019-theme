@@ -10,6 +10,6 @@ h1 {
 	font-family: $font__main;
 }
 
-h1.headings-box {
+.headings-box {
 	@include headings-box;
 }

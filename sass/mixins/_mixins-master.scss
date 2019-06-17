@@ -31,11 +31,13 @@
 // Mixin for stylised headings
 @mixin headings-box {
 	border: 4px solid #000;
-	padding: 1em 1.5em;
+	padding: .5rem .5rem;
 	background-color: #ffffff;
-	text-align: center;
 	width: max-content;
-	margin-bottom: 3vh;
+	margin-bottom: 1vh;
+	h1, h2, h3 {
+		text-align: center;
+	}
 }
 
 // Standard border styling
@@ -56,5 +58,5 @@
 	}
 	:-ms-input-placeholder {
 		@content
-	}  
+	}
 }

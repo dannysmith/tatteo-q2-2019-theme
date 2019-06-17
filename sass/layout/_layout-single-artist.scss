@@ -1,0 +1,56 @@
+@import '../variables-site/variables-site';
+
+.artist-page { //this styles the small header of the artist profile
+    > section.content-header {
+        border-bottom: 3px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+}
+
+
+div.image-area-wrapper { //this styles the image and the text on top of it
+    width:max-content;
+    position:relative;
+    z-index: -1;
+    img{
+        width: 900px;
+    }
+    h2 {
+        position: absolute;
+        top:5%;
+        left: 90%;
+        right:0;
+    }
+    p {
+        font-size:.8rem;
+        width: 30vw;
+        position: absolute;
+        top: 80%;
+        left: 10%;
+    }
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.artist-style {
+    margin-top: 3vh;
+    justify-content: right;
+}
+
+.hero-side-content {
+    justify-content: right;
+}
+
+.get-in-touch {
+    background-image: url(../../img-artist/link-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 2.5vh 1vw 0 1vw;
+
+}
