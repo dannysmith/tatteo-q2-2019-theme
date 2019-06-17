@@ -112,3 +112,22 @@
 	}
 }
 
+.taxonomies-wrapper {
+	display: flex;
+	margin: 1em 0;
+	div {
+		position: relative;
+		margin: 0 1em;
+	.taxonomies-dropdown {
+		display: none;
+		width: max-content;
+		position: absolute;
+		bottom: -30px;
+		left: -20px;
+		background: white;
+		-webkit-transform: translate(0, 100%);
+	}
+	}
+}
+
+

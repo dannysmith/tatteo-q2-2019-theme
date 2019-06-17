@@ -5,4 +5,10 @@
 
 	});
 
+  $('.taxonomies-button').on('touchstart click', function(event){
+    event.preventDefault();
+    $('.taxonomies-dropdown').hide();
+    $(event.target).parent().find('fieldset').toggle();
+  })
+
 })(jQuery);

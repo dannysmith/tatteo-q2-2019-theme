@@ -56,7 +56,7 @@
 				<div class="search-reveal">
 					<?php get_search_form(); ?>
 				</div>
-				<button class="search-button">
+				<button class="search-button">SEARCH<button>
 				<div class="user-login">
 					<?php
 					if ( is_user_logged_in() ) {
@@ -91,66 +91,71 @@
 					<label for="dates">Dates</label>
 					<input type="date" name="date_from" id="dates">
 					<input type="date" name="date_to" id="dates">
-					<!-- ART STYLE -->
+					<div class="taxonomies-wrapper">
+						<!-- ART STYLE -->
+						<div class="art-styles-wrapper taxonomy-form">
+							<button class="taxonomies-button">Style</button>
+							<fieldset class="taxonomies-dropdown">
+								<?php
+								$art_styles = get_terms(array(
+									'taxonomy' => 'art_style',
+									'hide_empty' => false,
+								));
+								foreach ($art_styles as $art_style) {
+									$style_name = $art_style->name;
+									echo '<p>';
+									echo '<input type="checkbox" name="art_style" value="'.$style_name.'" id="'.$style_name.'">';
+									echo '<label for="'.$style_name.'">' .$style_name. '</label>';
+									echo '</p>';
+								}
+								?>
+							</fieldset>
+						</div>
 
-					<label for="style">Style</label>
-					<fieldset>
-						<?php
-						$art_styles = get_terms(array(
-							'taxonomy' => 'art_style',
-							'hide_empty' => false,
-						));
-						foreach ($art_styles as $art_style) {
-							$style_name = $art_style->name;
-							echo '<p>';
-							echo '<input type="checkbox" name="art_style" value="'.$style_name.'" id="'.$style_name.'">';
-							echo '<label for="'.$style_name.'">' .$style_name. '</label>';
-							echo '</p>';
-						}
-						?>
-					</fieldset>
+						<!-- COMISSION -->
+						<div class="comissions-wrapper taxonomy-form">
+							<button class="taxonomies-button">Comission</button>
+							<fieldset class="taxonomies-dropdown">
+								<?php
+								$comissions = get_terms(array(
+									'taxonomy' => 'comission',
+									'hide_empty' => false,
+								));
+								foreach ($comissions as $comission) {
+									$comission_amount = $comission->name;
+									echo '<p>';
+									echo '<input type="checkbox" name="comission" value="'.$comission_amount.'" id="'.$comission_amount.'">';
+									echo '<label for="'.$comission_amount.'">' .$comission_amount. '</label>';
+									echo '</p>';
+								}
+								?>
+							</fieldset>
+						</div>
 
-					<!-- COMISSION -->
-
-					<label for="comission">Comission</label>
-					<fieldset>
-						<?php
-						$comissions = get_terms(array(
-							'taxonomy' => 'comission',
-							'hide_empty' => false,
-						));
-						foreach ($comissions as $comission) {
-							$comission_amount = $comission->name;
-							echo '<p>';
-							echo '<input type="checkbox" name="comission" value="'.$comission_amount.'" id="'.$comission_amount.'">';
-							echo '<label for="'.$comission_amount.'">' .$comission_amount. '</label>';
-							echo '</p>';
-						}
-						?>
-					</fieldset>
-
-					<!-- TOOLS -->
-
-					<label for="tools">Tools</label>
-					<fieldset>
-						<?php
-						$tools = get_terms(array(
-							'taxonomy' => 'tools',
-							'hide_empty' => false,
-						));
-						foreach ($tools as $tool) {
-							$tool_name = $tool->name;
-							echo '<p>';
-							echo '<input type="checkbox" name="tools" value="'.$tool_name.'" id="'.$tool_name.'">';
-							echo '<label for="'.$tool_name.'">' .$tool_name. '</label>';
-							echo '</p>';
-						}
-						?>
-					</fieldset>
+						<!-- TOOLS -->
+						<div class="tools-wrapper taxonomy-form">
+							<button class="taxonomies-button">Tools</button>
+							<fieldset class="taxonomies-dropdown">
+								<?php
+								$tools = get_terms(array(
+									'taxonomy' => 'tools',
+									'hide_empty' => false,
+								));
+								foreach ($tools as $tool) {
+									$tool_name = $tool->name;
+									echo '<p>';
+									echo '<input type="checkbox" name="tools" value="'.$tool_name.'" id="'.$tool_name.'">';
+									echo '<label for="'.$tool_name.'">' .$tool_name. '</label>';
+									echo '</p>';
+								}
+								?>
+							</fieldset>
+						</div>
 					<!-- ACCOMODATION -->
 					<input type="checkbox" name="accomodation" id="accomodation">
 					<label for="accomodation">Accomodation</label>
 					<input type="submit" id="searchsubmit" value="Search" />
+					</div>
 				</form>
 			</div>
 		</div>
