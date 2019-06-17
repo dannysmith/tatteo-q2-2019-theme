@@ -1,39 +1,55 @@
 @import '../variables-site/variables-site';
 
 #masthead {
+	position: sticky;
+	top: 0;
+
+	.header-search-form{
+		background: white;
+		border-bottom: 4px solid $color__border;
+	}
+	.fixed-header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: sticky;
-	top: 0;
 	padding: $layout__indent-small;
 	border-bottom: 4px solid $color__border;
 	background-color: #fff;
-	
+	}
+
 	.site-branding {
 		padding-right: $layout__indent-large;
 		width: 20%;
 		min-width: 155px;
-		
+
 		img {
 			display: block;
 		}
 	}
-	
+
+	.header-search-form-wrapper {
+		display: none;
+		height: 100vh;
+	}
+
+	.dark-filter {
+		background: rgba(0, 0, 0, 0.6)
+	}
+
 	.secondary-navigation {
 		display: flex;
 		width: 30%;
 		justify-content: flex-end;
 		align-items: center;
-		
-		@media screen and (max-width: 800px) { 
-			width: 60%;	
+
+		@media screen and (max-width: 800px) {
+			width: 60%;
 		}
 	}
-	
+
 	#site-navigation {
 		width: 50%;
-		
+
 		&.opened {
 			display: block;
 		    position: fixed;
@@ -43,27 +59,27 @@
 		    height: 100vh;
 		    width: 100vw;
 		    padding-top: 25%;
-		    padding-left: 15px;	
-		    
-		    .menu {			   
+		    padding-left: 15px;
+
+		    .menu {
 				text-align: center;
-				    
+
 			    li {
 				    margin-bottom: $layout__indent-small;
 					a {
 						font-size: 20px;
-					}    
+					}
 			    }
-		    }		
+		    }
 		}
 	}
-	
+
 	.site-title {
 		@include font-size(1);
 		font-weight: 700;
 		margin: 0;
 		text-align: center;
-		
+
 		a {
 			display: block;
 			padding: 10px;
@@ -71,14 +87,14 @@
 			word-break: break-word;
 			hyphens: auto;
 			@include black-border;
-			
+
 			&:hover {
 				background-color: #000;
 				color: #fff;
 			}
 		}
-	}	
-	
+	}
+
 	.user-login {
 		.user-avatar {
 			display: block;
@@ -89,7 +105,7 @@
 		    background-size: cover;
 		    text-indent: -99999px;
 		}
-		
+
 		a {
 			font-weight: 500;
 		}
