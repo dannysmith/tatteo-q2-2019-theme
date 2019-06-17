@@ -16,7 +16,7 @@ get_header();
         <h2>John Doe</h2>
         <!-- ***** --->
     </div>
-    <a class="get-in-touch white-link">Get in Touch</a>
+    <a class="get-in-touch white-link">Get In Touch</a>
 </section>
 <section class="hero-section">
     <div class="image-area-wrapper">
@@ -39,10 +39,30 @@ get_header();
 						?>
 					</ul>
         </div> <!-- artist style --->
-        <a class="get-in-touch white-link">Get in Touch</a>
+        <a class="get-in-touch white-link">Get In Touch</a>
     </div> <!-- hero side content --->
 </section>
 </div>
+<section class="gallery">
+    <h2 class="headings-box">Gallery</h2>
+    <ul class="images-grid grid-container">
+        <li><img src="http://www.fashionizm.com/wp-content/uploads/2017/04/back-dotwork-tattoo.jpg"></li>
+        <li><img src="http://www.dubuddha.org/wp-content/uploads/2018/01/Blackwork-Tattoo-on-Forearm-by-Yanina-Viland-305x304.jpg"></li>
+        <li><img src="http://tattoo-journal.com/wp-content/uploads/2016/08/blackwork-tattoo31-650x800.jpg"></li>
+        <li><img src="https://positivefox.com/wp-content/uploads/2018/09/geometric-blackwork-tattoos-blackwork-tattoo-blackwork-tattoo-meaning-730x540.jpg"></li>
+    </ul>
+</section>
+<section class="reviews">
+    <h2 class="headings-box">Reviews</h2>
+    <ul class="reviews-grid grid-container ">
+        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+    </ul>
+    </section>
+
+
+
 
 
 <!-- PLACEHOLDER CODE --->

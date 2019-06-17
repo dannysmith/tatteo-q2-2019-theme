@@ -6,9 +6,6 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: $font__letter-spacing;
 }
 
-h1 {
-	font-family: $font__main;
-}
 
 .headings-box {
 	@include headings-box;
