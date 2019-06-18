@@ -4,18 +4,18 @@
 	position: sticky;
 	top: 0;
 
-	.header-search-form{
+	.header-search-form {
 		background: white;
 		border-bottom: 4px solid $color__border;
 		padding: 1.5rem 5vw;
 	}
-	.fixed-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: $layout__indent-small;
-	border-bottom: 4px solid $color__border;
-	background-color: #fff;
+	.fixed-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: $layout__indent-small;
+		border-bottom: 4px solid $color__border;
+		background-color: #fff;
 	}
 
 	.site-branding {
@@ -35,11 +35,11 @@
 		left: 0;
 		bottom: 0;
 		width: 100vw;
-		-webkit-transform: translate(0, 100%);
+		transform: translate(0, 100%);
 	}
 
 	.dark-filter {
-		background: rgba(0, 0, 0, 0.6)
+		background: rgba(0, 0, 0, 0.6);
 	}
 
 	.secondary-navigation {
@@ -58,25 +58,25 @@
 
 		&.opened {
 			display: block;
-		    position: fixed;
-		    top: 0;
-		    left: 0;
-		    background-color: #fff;
-		    height: 100vh;
-		    width: 100vw;
-		    padding-top: 25%;
-		    padding-left: 15px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			height: 100vh;
+			width: 100vw;
+			padding-top: 25%;
+			padding-left: 15px;
 
-		    .menu {
+			.menu {
 				text-align: center;
 
-			    li {
-				    margin-bottom: $layout__indent-small;
+				li {
+					margin-bottom: $layout__indent-small;
 					a {
 						font-size: 20px;
 					}
-			    }
-		    }
+				}
+			}
 		}
 	}
 
@@ -104,12 +104,12 @@
 	.user-login {
 		.user-avatar {
 			display: block;
-		    height: 30px;
-		    width: 30px;
-		    border-radius: 50%;
-		    @include black-border;
-		    background-size: cover;
-		    text-indent: -99999px;
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+			@include black-border;
+			background-size: cover;
+			text-indent: -99999px;
 		}
 
 		a {
@@ -118,7 +118,8 @@
 	}
 }
 
-.location-filter, .dates-filter{
+.location-filter,
+.dates-filter {
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -127,19 +128,17 @@
 .taxonomies-wrapper {
 	display: flex;
 	margin: 1em 0;
-	div {
+	.taxonomy-form {
 		position: relative;
 		margin: 0 1em;
-	.taxonomies-dropdown {
-		display: none;
-		width: max-content;
-		position: absolute;
-		bottom: -30px;
-		left: -20px;
-		background: white;
-		-webkit-transform: translate(0, 100%);
-	}
+		.taxonomies-dropdown {
+			display: none;
+			width: max-content;
+			position: absolute;
+			bottom: -30px;
+			left: -20px;
+			background: white;
+			transform: translate(0, 100%);
+		}
 	}
 }
-
-

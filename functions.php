@@ -140,13 +140,13 @@ function tatteo_scripts()
 	wp_enqueue_script('tatteo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
 
-	wp_enqueue_script('jquery-ui-core');
+	wp_enqueue_script('jquery-ui-core', array('jquery'));
 
-	wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_script('jquery-ui-datepicker', array('jquery'));
 
 	wp_enqueue_style('jquery-ui-css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
-	wp_enqueue_script('tatteo-search-form-toggle', get_template_directory_uri() . '/js/search-form-toggle.js', array(), '20151215', true);
+	wp_enqueue_script('tatteo-attribute-filter-toggle', get_template_directory_uri() . '/js/attribute-filter-toggle.js', array(), '20151215', true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

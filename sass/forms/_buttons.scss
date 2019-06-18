@@ -1,17 +1,16 @@
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
 	border: 4px solid #000;
 	border-color: $color__border-button;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
+	background: $color__background-button-white;
+	color: rgba(0, 0, 0, 0.8);
 	@include font-size(0.75);
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: 0.6em 1em 0.4em;
 	font-family: $font__main;
 	font-weight: 700;
-
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -23,7 +22,7 @@ input[type="submit"] {
 	}
 }
 
-.search-button, {
+.search-button {
 	border: none;
 }
 
