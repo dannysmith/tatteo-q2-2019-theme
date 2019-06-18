@@ -102,14 +102,18 @@
 											'taxonomy' => 'art_style',
 											'hide_empty' => false,
 										));
-										foreach ($art_styles as $art_style) {
-											$style_name = $art_style->name;
-											echo '<p>';
-											echo '<input type="checkbox" name="art_style" value="'.$style_name.'" id="'.$style_name.'">';
-											echo '<label for="'.$style_name.'">' .$style_name. '</label>';
-											echo '</p>';
+										if (empty($art_styles)) {
+											echo '<p>Sorry, nothing found!</p>';
 										}
-										?>
+										else {
+											foreach ($art_styles as $art_style) {
+												$style_name = $art_style->name;
+												echo '<p>';
+												echo '<input type="checkbox" name="art_style" value="'.$style_name.'" id="'.$style_name.'">';
+												echo '<label for="'.$style_name.'">' .$style_name. '</label>';
+												echo '</p>';
+										}
+										 ?>
 									</fieldset>
 								</div>
 
@@ -122,14 +126,18 @@
 											'taxonomy' => 'comission',
 											'hide_empty' => false,
 										));
-										foreach ($comissions as $comission) {
-											$comission_amount = $comission->name;
-											echo '<p>';
-											echo '<input type="checkbox" name="comission" value="'.$comission_amount.'" id="'.$comission_amount.'">';
-											echo '<label for="'.$comission_amount.'">' .$comission_amount. '</label>';
-											echo '</p>';
+										if (empty($comissions)) {
+											echo '<p>Sorry, nothing found!</p>';
+										} else {
+											foreach ($comissions as $comission) {
+												$comission_amount = $comission->name;
+												echo '<p>';
+												echo '<input type="checkbox" name="comission" value="'.$comission_amount.'" id="'.$comission_amount.'">';
+												echo '<label for="'.$comission_amount.'">' .$comission_amount. '</label>';
+												echo '</p>';
+											}
 										}
-										?>
+										 ?>
 									</fieldset>
 								</div>
 
@@ -142,14 +150,17 @@
 											'taxonomy' => 'tools',
 											'hide_empty' => false,
 										));
-										foreach ($tools as $tool) {
-											$tool_name = $tool->name;
-											echo '<p>';
-											echo '<input type="checkbox" name="tools" value="'.$tool_name.'" id="'.$tool_name.'">';
-											echo '<label for="'.$tool_name.'">' .$tool_name. '</label>';
-											echo '</p>';
+										if (empty($tools)) {
+											echo '<p>Sorry, nothing found!</p>';
+										} else {
+											foreach ($tools as $tool) {
+												$tool_name = $tool->name;
+												echo '<p>';
+												echo '<input type="checkbox" name="tools" value="'.$tool_name.'" id="'.$tool_name.'">';
+												echo '<label for="'.$tool_name.'">' .$tool_name. '</label>';
+												echo '</p>';
 										}
-										?>
+										 ?>
 									</fieldset>
 								</div>
 							<!-- ACCOMODATION -->
@@ -163,10 +174,5 @@
 					</div>
 				</div>
 		</div>
-
-
 	</header><!-- #masthead -->
-
-
-
 	<div id="content" class="site-content">
