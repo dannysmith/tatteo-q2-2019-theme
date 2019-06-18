@@ -22,3 +22,12 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.search-button, {
+	border: none;
+}
+
+.button-focused {
+	background: black;
+	color: white;
+}

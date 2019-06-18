@@ -53,10 +53,7 @@
 			</nav><!-- #site-navigation -->
 
 			<nav class="secondary-navigation">
-				<div class="search-reveal">
-					<?php get_search_form(); ?>
-				</div>
-				<button class="search-button">SEARCH<button>
+				<button class="search-button"><img src="<?php echo get_site_url()?>/wp-content/themes/tatteo/img/search.svg"></button>
 				<div class="user-login">
 					<?php
 					if ( is_user_logged_in() ) {
@@ -90,8 +87,10 @@
 							<!-- DATES -->
 							<div class="dates-filter">
 								<label for="dates">Dates</label>
-								<input type="date" name="date_from" id="dates">
-								<input type="date" name="date_to" id="dates">
+								<div class="date-inputs">
+									<input type="date" name="date_from" id="dates">
+									<input type="date" name="date_to" id="dates">
+								</div>
 							</div>
 							<div class="taxonomies-wrapper">
 								<!-- ART STYLE -->

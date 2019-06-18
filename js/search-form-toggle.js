@@ -11,10 +11,12 @@
     //Toggles the taxonomy dropdown for the clicked button, while hiding the other forms
     taxonomyForms.forEach(function(element) {
       if (element.contains(event.target)) {
+        $(event.target).toggleClass('button-focused')
         $(element).find('.taxonomies-dropdown').toggle();
       }
       else {
         $(element).find('.taxonomies-dropdown').hide()
+        $(element).find('.taxonomies-button').removeClass('button-focused')
       }
     })
   })
