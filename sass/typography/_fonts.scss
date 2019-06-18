@@ -1,0 +1,13 @@
+@mixin font-face(Bebas, Fonts/bebas) {
+	@font-face {
+		font-family: 'Bebas';
+		src: url('Fonts/bebas/Bebas-Regular.eot');
+		src: url('Fonts/bebas/Bebas-Regular.eot?#iefix') format('embedded-opentype'),
+			src: url('Fonts/bebas/Bebas-Regular.woff2') format('woff2'),
+			url('Fonts/bebas/Bebas-Regular.woff') format('woff'),
+			url('Fonts/bebas/Bebas-Regular.ttf') format('truetype'),
+			url('Fonts/bebas/Bebas-Regular.svg#Bebas-Regular') format('svg');
+		font-weight: 500;
+		font-style: normal;
+	}
+}

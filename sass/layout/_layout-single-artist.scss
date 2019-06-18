@@ -12,28 +12,46 @@
     }
 }
 
+ //this styles the small header of the artist profile
+    section.content-header {
+        border-bottom: 4px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        > a {
+            font-size:.8rem;
+        }
+    }
 
-div.image-area-wrapper { //this styles the image and the text on top of it
-    width:max-content;
-    position:relative;
-    z-index: -1;
-    img{
-        max-width: 700px;
+
+
+
+    div.image-area-wrapper { //this styles the image and the text on top of it
+        position:relative;
+        z-index: -100;
+        width: max-content;
+        img{
+            // max-width: 70%;
+            // min-width: 70%;
+            width: 40vw;
+            height: auto;
+        }
+        h2 {
+            position: absolute;
+            bottom:70%;
+            right: 0;
+            transform: translate(-50%, 0);
+            z-index: 10;
+        }
+        p { //bio section
+            font-size:.8rem;
+            width: 30vw;
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+        }
+
     }
-    h2 {
-        position: absolute;
-        top:5%;
-        left: 90%;
-        right:0;
-    }
-    p {
-        font-size:.8rem;
-        width: 30vw;
-        position: absolute;
-        top: 50%;
-        left: 10%;
-    }
-}
 
 .hero-section {
     border-bottom: 4px solid black;
@@ -77,19 +95,22 @@ div.image-area-wrapper { //this styles the image and the text on top of it
 }
 
 .images-grid {
-    height:50vh;
+    height:auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 1.5rem;
     margin:0;
     padding:0;
     > li {
-        height:50vh;
+        height:auto;
         >img {
-            height:100%;
+            height:auto;
+            width:auto;
         }
     }
 }
+
+
 
 .reviews-grid {
     height:50vh;

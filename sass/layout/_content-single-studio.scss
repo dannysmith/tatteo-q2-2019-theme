@@ -1,0 +1,82 @@
+@import '../variables-site/variables-site';
+
+
+img {
+  height: 60%;
+  width: 60%;
+}
+
+
+button{
+  color: white;
+  background-color: black;
+
+}
+
+.hero-section {
+  border-bottom: 4px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.studio-tools {
+  margin-top: 3vh;
+  justify-content: right;
+}
+
+.hero-side-content {
+  margin-bottom: 5vh;
+  height: 70vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-end;
+  > a {
+      width:200px;
+      height:75.81px;
+  }
+}
+
+.get-in-touch {
+  background-image: url(../../img-artist/link-button.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .8em;
+}
+
+.gallery{
+  padding:0 0 5vh 0;
+  border-bottom: 4px solid black;
+}
+
+.images-grid {
+  height:50vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1.5rem;
+  margin:0;
+  padding:0;
+  > li {
+      height:50vh;
+      >img {
+          height:100%;
+      }
+  }
+}
+
+.reviews-grid {
+  height:50vh;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1.5rem;
+  margin:0;
+  padding:0;
+  p {
+      width:100%;
+  }
+}
