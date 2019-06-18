@@ -46,10 +46,12 @@ get_header();
 								//Replace with correct template part name
 								get_template_part('template-parts/content', 'studio-search');
 							}
+							echo '</div>';
 							/* Restore original Post Data */
 							wp_reset_postdata();
 						} else {
 							// no posts found
+							echo '<p>No posts found</p>';
 						}
 						?>
 
@@ -72,10 +74,12 @@ get_header();
 								//Replace with correct template part name
 								get_template_part('template-parts/content', 'guestspot-search');
 							}
+							echo '</div>';
 							/* Restore original Post Data */
 							wp_reset_postdata();
 						} else {
 							// no posts found
+							echo '<p>No posts found</p>';
 						}
 						?>
 
@@ -98,10 +102,12 @@ get_header();
 								//Replace with correct template part name
 								get_template_part('template-parts/content', 'artist-search');
 							}
+							echo '</div>';
 							/* Restore original Post Data */
 							wp_reset_postdata();
 						} else {
 							// no posts found
+							echo '<p>No posts found</p>';
 						}
 						?>
 
