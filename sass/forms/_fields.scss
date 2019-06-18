@@ -25,6 +25,10 @@ textarea {
 	}
 }
 
+input[type="checkbox"] {
+	border: 4px solid $color__border;
+}
+
 select {
 	border: 1px solid $color__border-input;
 }
@@ -37,4 +41,8 @@ textarea {
 label {
 	font-weight: bolder;
 
+}
+
+fieldset {
+	border: 4px solid $color__border;
 }

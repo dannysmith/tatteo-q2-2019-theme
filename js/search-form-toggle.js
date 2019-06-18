@@ -1,14 +1,21 @@
 (function($) {
+    //Shows search form on headr icon click
 	$('.search-button').on('touchstart click', function(){
-		// reveal search input
-		$('.header-search-form-wrapper').slideToggle();
-
+		$('.header-search-form-wrapper').toggle();
 	});
-
+    //Event handled for every taxonomy button
   $('.taxonomies-button').on('touchstart click', function(event){
     event.preventDefault();
-    $('.taxonomies-dropdown').hide();
-    $(event.target).parent().find('fieldset').toggle();
-  })
 
+    let taxonomyForms = document.querySelectorAll('.taxonomy-form')
+    //Toggles the taxonomy dropdown for the clicked button, while hiding the other forms
+    taxonomyForms.forEach(function(element) {
+      if (element.contains(event.target)) {
+        $(element).find('.taxonomies-dropdown').toggle();
+      }
+      else {
+        $(element).find('.taxonomies-dropdown').hide()
+      }
+    })
+  })
 })(jQuery);

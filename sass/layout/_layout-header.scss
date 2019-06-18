@@ -30,6 +30,11 @@
 	.header-search-form-wrapper {
 		display: none;
 		height: 100vh;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100vw;
+		-webkit-transform: translate(0, 100%);
 	}
 
 	.dark-filter {
@@ -110,6 +115,12 @@
 			font-weight: 500;
 		}
 	}
+}
+
+.location-filter{
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .taxonomies-wrapper {
