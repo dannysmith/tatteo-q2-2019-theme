@@ -102,18 +102,18 @@
 											'taxonomy' => 'art_style',
 											'hide_empty' => false,
 										));
-										if (empty($art_styles)) {
-											echo '<p>Sorry, nothing found!</p>';
-										}
-										else {
+										if (!empty($art_syles)) {
 											foreach ($art_styles as $art_style) {
 												$style_name = $art_style->name;
 												echo '<p>';
 												echo '<input type="checkbox" name="art_style" value="'.$style_name.'" id="'.$style_name.'">';
 												echo '<label for="'.$style_name.'">' .$style_name. '</label>';
 												echo '</p>';
+											}
+										} else {
+											echo '<p> Sorry nothing found! </p>';
 										}
-										 ?>
+										?>
 									</fieldset>
 								</div>
 
@@ -126,9 +126,7 @@
 											'taxonomy' => 'comission',
 											'hide_empty' => false,
 										));
-										if (empty($comissions)) {
-											echo '<p>Sorry, nothing found!</p>';
-										} else {
+										if (!empty($comissions)) {
 											foreach ($comissions as $comission) {
 												$comission_amount = $comission->name;
 												echo '<p>';
@@ -136,8 +134,10 @@
 												echo '<label for="'.$comission_amount.'">' .$comission_amount. '</label>';
 												echo '</p>';
 											}
+										} else {
+											echo '<p> Sorry nothing found! </p>';
 										}
-										 ?>
+										?>
 									</fieldset>
 								</div>
 
@@ -150,17 +150,18 @@
 											'taxonomy' => 'tools',
 											'hide_empty' => false,
 										));
-										if (empty($tools)) {
-											echo '<p>Sorry, nothing found!</p>';
-										} else {
+										if (!empty($tools)) {
 											foreach ($tools as $tool) {
 												$tool_name = $tool->name;
 												echo '<p>';
 												echo '<input type="checkbox" name="tools" value="'.$tool_name.'" id="'.$tool_name.'">';
 												echo '<label for="'.$tool_name.'">' .$tool_name. '</label>';
 												echo '</p>';
+											}
+										} else {
+											echo '<p> Sorry nothing found! </p>';
 										}
-										 ?>
+										?>
 									</fieldset>
 								</div>
 							<!-- ACCOMODATION -->
@@ -174,5 +175,9 @@
 					</div>
 				</div>
 		</div>
+
 	</header><!-- #masthead -->
+
+
+
 	<div id="content" class="site-content">
