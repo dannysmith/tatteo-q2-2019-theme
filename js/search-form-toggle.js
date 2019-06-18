@@ -1,14 +1,22 @@
 (function($) {
-    //Shows search form on headr icon click
+  //Shows search form on header icon click
 	$('.search-button').on('touchstart click', function(){
 		$('.header-search-form-wrapper').toggle();
 	});
-    //Event handled for every taxonomy button
+
+  // Event handler to hide dropdown boxes on another input focus
+  $('#location, #dates, #accomodation').on('focus', function(){
+    $('.taxonomies-dropdown').hide()
+    $('.taxonomies-button').removeClass('button-focused')
+    //<-- Add line to hide calendar dropdowns here -->
+  })
+
+  //Event handled for every taxonomy button
   $('.taxonomies-button').on('touchstart click', function(event){
     event.preventDefault();
 
-    let taxonomyForms = document.querySelectorAll('.taxonomy-form')
     //Toggles the taxonomy dropdown for the clicked button, while hiding the other forms
+    let taxonomyForms = document.querySelectorAll('.taxonomy-form')
     taxonomyForms.forEach(function(element) {
       if (element.contains(event.target)) {
         $(event.target).toggleClass('button-focused')
@@ -21,3 +29,4 @@
     })
   })
 })(jQuery);
+
