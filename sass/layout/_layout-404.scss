@@ -29,6 +29,6 @@
 
 .category-suggestion-wrapper {
     display:grid;
-    grid-column: repeat(2, 1fr);
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 12px 12px 12px;
 }
