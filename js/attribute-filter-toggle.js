@@ -12,7 +12,7 @@
 		switch (form) {
 			case 'studios':
 				$('.dates-filter').hide();
-				$('taxonomies-wrapper').show();
+				$('.taxonomies-wrapper').show();
 				break;
 			case 'guest_spots':
 				$('.taxonomies-wrapper , .dates-filter').show();
