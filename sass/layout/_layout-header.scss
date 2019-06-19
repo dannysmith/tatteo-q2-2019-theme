@@ -124,11 +124,18 @@
 	flex-direction: column;
 	align-items: flex-start;
 }
-
-.top-filters,
-.bottom-filters {
-	display: flex;
-	justify-content: space-between;
+.search-form {
+	.top-filters,
+	.bottom-filters {
+		display: flex;
+		justify-content: space-between;
+	}
+	.search-post-types-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 0 0 1em 0;
+	}
 }
 
 .taxonomies-wrapper {

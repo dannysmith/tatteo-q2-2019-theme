@@ -1,7 +1,19 @@
 <!-- Div Fixed Header -->
+
+<div class="search-post-types-wrapper">
+
+</div>
 <div class="header-search-form-wrapper dark-filter search-toggle">
 	<div class="header-search-form search-toggle">
-		<form name="search-form" method="get" role="search" action="<?php echo esc_url(home_url('/')); ?>">
+		<form class ="search-form" name="search-form" method="get" role="search" action="<?php echo esc_url(home_url('/')); ?>">
+		<div class="search-post-types-wrapper">
+			<button class="post-type-button button-focused" id="studios">Studios</button>
+			<input type="radio" name="post_type" id="post_type" value="studio" checked>
+			<button class="post-type-button" id="guest_spots">Guest Spots</button>
+			<input type="radio" name="post_type" id="post_type" value="guest_spot" >
+			<button class="post-type-button" id="events">Events</button>
+			<input type="radio" name="post_type" id="post_type" value="event" >
+		</div>
 		<div class="top-filters">
 			<!-- LOCATION -->
 			<div class="location-filter">
