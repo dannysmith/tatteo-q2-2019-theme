@@ -14,20 +14,23 @@ get_header();
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
+				<header class="error-page-header">
+				<div class="error-page-content">
 					<h1 class="page-title"><?php esc_html_e( 'Oops!', 'tatteo' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like something went wrong here. Try refreshing the page or go to our', 'tatteo' ); ?></p>
-					<a class="404-home-button" href=" <?php echo get_home_url() ?>">Home Page</a>
-
-					<p> Maybe try a search or one of the links below. </p>
-					<?php
-					get_search_form();
-					?>
-
+					<p><?php esc_html_e( 'It looks like something went wrong here. Refresh the page or...', 'tatteo' ); ?></p>
+					<div class="search-suggestion">
+						<?php
+						get_search_form();
+						?>
+					</div> <!--search suggestion-->
+					</div>
+					<h2 class="404">404</h2>
+					</header><!-- .page-header -->
+					<section class="suggestion-content">
+					<h2> You can also check out these links: </h2>
+					<div class="category-grid-wrapper">
 					<!-- //Display 3 random studios based on the same template as on search page -->
+					<div class="studio-suggestion">
 					<?php
 					// New Query
 					$args = array (
@@ -39,7 +42,7 @@ get_header();
 						$studios = new WP_Query( $args );
 
 						if ( $studios->have_posts() ) {
-							echo '<h2> Explore Studios </h2>';
+							echo '<h2 class="headings-box"> Explore Studios </h2>';
 							echo '<div class="404-studios">';
 							while ( $studios->have_posts() ) {
 								$studios->the_post();
@@ -49,13 +52,12 @@ get_header();
 							echo '</div>';
 							/* Restore original Post Data */
 							wp_reset_postdata();
-						} else {
-							// no posts found
-							echo '<p>No posts found</p>';
 						}
 						?>
+						</div> <!--STUDIO SUGGESTION-->
 
 					<!-- //Display 3 random studios based on the same template as on search page -->
+					<div class="guestspot-suggestion">
 					<?php
 					// New Query
 					$args = array (
@@ -67,7 +69,7 @@ get_header();
 						$studios = new WP_Query( $args );
 
 						if ( $studios->have_posts() ) {
-							echo '<h2> Explore Guestspots </h2>';
+							echo '<h2 class="headings-box"> Explore Guestspots </h2>';
 							echo '<div class="404-guestspot">';
 							while ( $studios->have_posts() ) {
 								$studios->the_post();
@@ -79,7 +81,7 @@ get_header();
 							wp_reset_postdata();
 						} else {
 							// no posts found
-							echo '<p>No posts found</p>';
+							//echo '<p>No posts found</p>';
 						}
 						?>
 
@@ -95,7 +97,7 @@ get_header();
 						$studios = new WP_Query( $args );
 
 						if ( $studios->have_posts() ) {
-							echo '<h2> Explore Artist </h2>';
+							echo '<h2 class="headings-box"> Explore Artist </h2>';
 							echo '<div class="404-artist">';
 							while ( $studios->have_posts() ) {
 								$studios->the_post();
@@ -110,9 +112,9 @@ get_header();
 							echo '<p>No posts found</p>';
 						}
 						?>
-
-
-				</div><!-- .page-content -->
+						</div><!--GUESTSPOT SUGGESTION-->
+					</div><!-- CATEGORY GRID WRAPPER  -->
+					</section><!-- SUGGESTION CONTENT -->
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
