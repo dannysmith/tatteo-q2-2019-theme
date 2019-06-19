@@ -52,9 +52,6 @@ get_header();
 							echo '</div>';
 							/* Restore original Post Data */
 							wp_reset_postdata();
-						} else {
-							// no posts found
-							//echo '<p>No posts found</p>';
 						}
 						?>
 						</div> <!--STUDIO SUGGESTION-->
