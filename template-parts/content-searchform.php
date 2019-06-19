@@ -11,6 +11,8 @@
 			<input type="radio" name="post_type" id="post_type" value="guest_spot" checked>
 			<button class="post-type-button" id="studios">Studios</button>
 			<input type="radio" name="post_type" id="post_type" value="studio" >
+			<button class="post-type-button" id="artists">Artists</button>
+			<input type="radio" name="post_type" id="post_type" value="artist" >
 			<button class="post-type-button" id="events">Events</button>
 			<input type="radio" name="post_type" id="post_type" value="event" >
 		</div>
@@ -27,6 +29,11 @@
 					<input type="text" name="date_from" id="date_from" placeholder="From...">
 					<input type="text" name="date_to" id="date_to" placeholder="To...">
 				</div>
+			</div>
+			<!-- NAME -->
+			<div class="name-filter">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Search...">
 			</div>
 		</div>
 		<div class="bottom-filters">
