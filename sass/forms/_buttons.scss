@@ -25,12 +25,12 @@ input[type="submit"] {
 
 // 404 Page search button
 .error-page-content{
-input#searchsubmit{
-	background:$color__link-black;
-	color:#fff;
-	border-radius: 0;
-	padding: .7em .7em;
-	font-size: 1rem;
-	text-transform: uppercase;
-}
+	#searchsubmit{
+		background:$color__link-black;
+		color:#fff;
+		border-radius: 0;
+		padding: .7em .7em;
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
 }
