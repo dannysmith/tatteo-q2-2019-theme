@@ -15,18 +15,20 @@ get_header();
 
 			<section class="error-404 not-found">
 				<header class="error-page-header">
+				<div class="error-page-content">
 					<h1 class="page-title"><?php esc_html_e( 'Oops!', 'tatteo' ); ?></h1>
 					<p><?php esc_html_e( 'It looks like something went wrong here. Refresh the page or...', 'tatteo' ); ?></p>
-				</header><!-- .page-header -->
-
-				<div class="error-page-content">
 					<div class="search-suggestion">
 						<?php
 						get_search_form();
 						?>
 					</div> <!--search suggestion-->
-					<p> You can also check out these links: </p>
-					<div class="category-suggestion-wrapper">
+					</div>
+					<h2 class="404">404</h2>
+					</header><!-- .page-header -->
+					<section class="suggestion-content">
+					<h2> You can also check out these links: </h2>
+					<div class="category-grid-wrapper">
 					<!-- //Display 3 random studios based on the same template as on search page -->
 					<div class="studio-suggestion">
 					<?php
@@ -114,8 +116,8 @@ get_header();
 						}
 						?>
 						</div><!--GUESTSPOT SUGGESTION-->
-					</div><!-- category suggestions -->
-				</div><!-- .error-page-content -->
+					</div><!-- CATEGORY GRID WRAPPER  -->
+					</section><!-- SUGGESTION CONTENT -->
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
