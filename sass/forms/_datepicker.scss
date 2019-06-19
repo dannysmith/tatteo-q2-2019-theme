@@ -1,0 +1,56 @@
+//Outer container for datepicker
+.ui-datepicker,
+.ui-datepicker-header {
+	border: 4px solid #000;
+	background: white;
+	border-radius: 0;
+}
+
+.ui-datepicker-calendar {
+	border: none;
+	font-family: $font__main;
+	background: white;
+	span {
+		font-family: $font__main;
+	}
+	a {
+		font-family: $font__main;
+		border: 1px solid #000;
+		background: white;
+	}
+	.ui-widget-content {
+		.ui-state-default {
+			background: white;
+		}
+	}
+}
+
+.ui-datepicker-title {
+	font-family: $font__main;
+	.ui-datepicker-month,
+	.ui-datepicker-year {
+		font-family: $font__main;
+	}
+}
+
+.ui-state-active {
+	background: black !important;
+	color: white !important;
+	border: 1px solid #000;
+}
+
+.ui-datepicker td .ui-state-default {
+	background: white;
+	color: black;
+}
+
+.ui-state-highlight {
+	border: none !important;
+	background: grey !important;
+	color: white !important;
+}
+
+.ui-state-hover {
+	background: black !important;
+	color: white !important;
+}

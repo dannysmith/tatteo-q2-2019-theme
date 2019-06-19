@@ -2,6 +2,7 @@
 <div class="header-search-form-wrapper dark-filter search-toggle">
 	<div class="header-search-form search-toggle">
 		<form name="search-form" method="get" role="search" action="<?php echo esc_url(home_url('/')); ?>">
+		<div class="top-filters">
 			<!-- LOCATION -->
 			<div class="location-filter">
 				<label for="location">Location</label>
@@ -11,10 +12,12 @@
 			<div class="dates-filter">
 				<label for="dates">Dates</label>
 				<div class="date-inputs">
-					<input type="date" name="date_from" id="dates">
-					<input type="date" name="date_to" id="dates">
+					<input type="text" name="date_from" id="date_from" placeholder="From...">
+					<input type="text" name="date_to" id="date_to" placeholder="To...">
 				</div>
 			</div>
+		</div>
+		<div class="bottom-filters">
 			<div class="taxonomies-wrapper">
 				<!-- ART STYLE -->
 				<div class="art-styles-wrapper taxonomy-form">
@@ -93,6 +96,7 @@
 					<label for="accomodation">Accomodation</label>
 				</div>
 				<input type="submit" id="searchsubmit" value="Search" />
+					</div>
 			</div>
 		</form>
 	</div>

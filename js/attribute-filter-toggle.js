@@ -11,9 +11,8 @@
 		//<-- Add line to hide calendar dropdowns here -->
 	});
 
-	$('#dates').each(function() {
-		$(this).datepicker();
-	});
+	// Attaches the datepicker widget to inputs with the datepicker classs
+	$('#date_from , #date_to').datepicker({ dateFormat: 'dd/mm/yy' });
 
 	//Event handled for every taxonomy button
 	$('.taxonomies-button').on('touchstart click', function(event) {

@@ -126,9 +126,6 @@ add_action('widgets_init', 'tatteo_widgets_init');
  */
 function tatteo_scripts()
 {
-
-	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
-
 	wp_enqueue_style('tatteo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap', false);
 
 	wp_enqueue_style('inhabitents-fontawesome', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css', array());
@@ -147,6 +144,8 @@ function tatteo_scripts()
 	wp_enqueue_style('jquery-ui-css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
 	wp_enqueue_script('tatteo-attribute-filter-toggle', get_template_directory_uri() . '/js/attribute-filter-toggle.js', array(), '20151215', true);
+
+	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
