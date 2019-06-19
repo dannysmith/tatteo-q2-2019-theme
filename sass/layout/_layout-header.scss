@@ -132,7 +132,8 @@
 }
 
 .taxonomies-wrapper {
-	display: flex;
+	display: inline-flex;
+	align-items: center;
 	margin: 1em 0;
 	.taxonomy-form {
 		position: relative;
@@ -149,5 +150,8 @@
 			background: white;
 			transform: translate(0, 100%);
 		}
+	}
+	.art-styles-wrapper {
+		margin-left: 0;
 	}
 }

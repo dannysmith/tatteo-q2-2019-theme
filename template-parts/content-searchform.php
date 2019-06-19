@@ -95,8 +95,8 @@
 					<input type="checkbox" name="accomodation" id="accomodation">
 					<label for="accomodation">Accomodation</label>
 				</div>
+			</div>
 				<input type="submit" id="searchsubmit" value="Search" />
-					</div>
 			</div>
 		</form>
 	</div>
