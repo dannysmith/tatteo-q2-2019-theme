@@ -1,0 +1,34 @@
+@import '../variables-site/variables-site';
+
+.error-404 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .error-page-content {
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align:center;
+    }
+}
+
+.search-suggestion {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:60px;
+    border-bottom: 4px solid black;
+}
+
+.category-suggestion-wrapper {
+    display:grid;
+    grid-column: repeat(2, 1fr);
+    grid-auto-rows: auto;
+}
