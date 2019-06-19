@@ -17,7 +17,7 @@
 				$('.taxonomies-wrapper , .name-filter').show();
 				break;
 			case 'guest_spots':
-				$('.name-filter');
+				$('.name-filter').hide();
 				$('.taxonomies-wrapper , .dates-filter').show();
 				break;
 			case 'events':
