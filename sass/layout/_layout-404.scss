@@ -7,7 +7,7 @@
     .error-page-header {
         width:100%;
         padding:60px;
-        border-bottom: 4px solid black;
+        border-bottom: 4px solid $color__border;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -15,7 +15,7 @@
             font-size: 180px;
             margin:0;
             padding-right:120px;
-            color:black;
+            color:$color__border;
         }
         .error-page-content{
             text-align: center;
