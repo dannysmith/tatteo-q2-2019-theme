@@ -102,7 +102,7 @@
 						<label for="accomodation">Accomodation</label>
 					</div>
 				</div>
-				<input type="submit" id="searchsubmit" value="Search" />
+				<input type="submit" id="searchsubmit" value="Update" />
 			</div>
 		</form>
 	</div>
