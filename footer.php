@@ -13,21 +13,21 @@
 
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer">
-	<section class="subscription-section">
-		<h2 class="subscribe">Subscribe to our Newsletter</h2>
-	<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-    <div>
-        <input type="text" value="" name="s" id="subscribe" placeholder="..try another search" />
-        <input type="submit" id="searchsubmit" value="Submit" />
-    </div>
-</form>
+		<section class="subscription-section">
+			<h2 class="subscribe">Subscribe to our Newsletter</h2>
+			<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+   	 		<div>
+      		<input type="text" value="" name="s" id="subscribe" placeholder="..try another search" />
+      		<input type="submit" id="searchsubmit" value="Submit" />
+    		</div>
+			</form>
 	</section><!-- SUBSCIPTION SECTION -->
 		<div class="wrapper main-footer">
 			<div class="site-info">
 				<div class="footer-logo">
 					<?php if (has_custom_logo()) {
-					$custom_logo_id = get_theme_mod( 'custom_logo' );
-					$image = wp_get_attachment_image( $custom_logo_id , 'site-logo' ); ?>
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$image = wp_get_attachment_image( $custom_logo_id , 'site-logo' ); ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<?php echo $image; ?>
 					</a>
