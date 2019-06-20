@@ -24,14 +24,15 @@
 	</section><!-- SUBSCIPTION SECTION -->
 		<div class="wrapper main-footer">
 			<div class="site-info">
-
-			<?php if (has_custom_logo()) {
-				$custom_logo_id = get_theme_mod( 'custom_logo' );
-				$image = wp_get_attachment_image( $custom_logo_id , 'site-logo' ); ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<?php echo $image; ?>
-				</a>
-			<?php } ?>
+				<div class="footer-logo">
+					<?php if (has_custom_logo()) {
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image = wp_get_attachment_image( $custom_logo_id , 'site-logo' ); ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<?php echo $image; ?>
+					</a>
+					<?php } ?>
+				</div> <!-- footer-logo -->
 
 
 

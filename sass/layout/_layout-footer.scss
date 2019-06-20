@@ -26,12 +26,10 @@
 	background-color: $color__background-footer;
 	color: $color__text-footer;
 	padding: $layout__indent-large	$layout__indent-small;
-
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
 		padding: $layout__indent-large 0;
-
 		.site-info,
 		.site-social {
 			max-width: 250px;
@@ -66,4 +64,8 @@
 		padding: 0;
 		margin: 0;
 	}
+}
+
+.footer-logo > a > img { // ensures the logo in footer is inverted
+	filter: invert(100%);
 }
