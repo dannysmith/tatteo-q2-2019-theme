@@ -4,16 +4,6 @@
 	padding: 1.5rem 5vw;
 }
 
-.header-search-form-wrapper {
-	display: none;
-	height: 100vh;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100vw;
-	transform: translate(0, 100%);
-}
-
 .location-filter,
 .dates-filter,
 .name-filter {
@@ -44,6 +34,7 @@
 		margin: 0 1em;
 		.taxonomies-button {
 			padding: 0.75em 3em;
+			overflow: hidden;
 		}
 		.taxonomies-dropdown {
 			display: none;
