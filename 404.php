@@ -19,9 +19,13 @@ get_header();
 					<h1 class="page-title"><?php esc_html_e( 'Oops!', 'tatteo' ); ?></h1>
 					<p><?php esc_html_e( 'It looks like something went wrong here. Refresh the page or...', 'tatteo' ); ?></p>
 					<div class="search-suggestion">
-						<?php
-						get_search_form();
-						?>
+					<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+    <div>
+        <input type="text" value="" name="s" id="s" placeholder="..try another search" />
+        <input type="submit" id="searchsubmit" value="Submit" />
+    </div>
+</form>
+
 					</div> <!--search suggestion-->
 					</div>
 					<h2 class="404">404</h2>
