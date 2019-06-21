@@ -7,6 +7,7 @@
  * @package Tatteo
  */
 
+
 if (!function_exists('tatteo_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -147,22 +148,19 @@ function tatteo_scripts()
 
 	wp_enqueue_script('tatteo-attribute-filter-api', get_template_directory_uri() . '/js/attribute-filter-api.js', array(), '20151215', true);
 
+	// include_once('inc/ajax.php');
+
 	wp_localize_script(
 		'tatteo-attribute-filter-api',
-		'tatteo_vars',
+		'api_vars',
 		array(
+			'ajaxurl' => admin_url('admin-ajax.php'),
 			'nonce' => wp_create_nonce('wp_rest'),
-			'failure' => 'Sorry something went wrong. Please try again.',
-			'user_logged_in' => is_user_logged_in(),
-			'site_url' => site_url(),
-			'method' => 'POST',
-			'action' => '',
-			'ajax_url' => '/wp-admin/admin-ajax.php',
+			'action' => 'update_search_filter'
 		)
 	);
 
 	wp_enqueue_style('tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
-
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -170,6 +168,39 @@ function tatteo_scripts()
 }
 add_action('wp_enqueue_scripts', 'tatteo_scripts');
 
+add_action('wp_ajax_update_search_filter', 'update_search_filter');
+add_action('wp_ajax_update_search_filter', 'update_search_filter');
+function update_search_filter()
+{
+	echo "<pre>";
+	$test = array();
+	parse_str($_POST[query], $test);
+	print_r($test);
+	print_r($test[name]);
+	echo "</pre>";
+
+	$args = array(
+		'post_type' => $__POST[post_type],
+	);
+
+
+	// The Query
+	$the_query = new WP_Query($args);
+
+	// The Loop
+	if ($the_query->have_posts()) {
+		echo '<ul>';
+		while ($the_query->have_posts()) {
+			$the_query->the_post();
+			echo '<li>' . get_the_title() . '</li>';
+		}
+		echo '</ul>';
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	} else {
+		// no posts found
+	}
+};
 
 /**
  * Implement the Custom Header feature.

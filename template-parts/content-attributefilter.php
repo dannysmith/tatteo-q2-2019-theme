@@ -2,7 +2,7 @@
 
 <div class="header-search-form-wrapper dark-filter search-toggle">
 	<div class="header-search-form search-toggle">
-		<form class="search-form" name="search-form" method="get" role="search" action="<?php echo esc_url(home_url('/')); ?>">
+		<form class="search-form" id="attributes" name="search-form" method="post" role="search" action="<?php echo esc_url(home_url('/')); ?>">
 			<div class="search-post-types-wrapper">
 				<button class="post-type-button" id="guest_spots">Guest Spots</button>
 				<input type="checkbox" name="post_type" id="post_type" value="guest_spot">
@@ -44,6 +44,7 @@
 								'taxonomy' => 'art_style',
 								'hide_empty' => false,
 							));
+							var_dump($art_styles);
 							if (!empty($art_syles)) {
 								foreach ($art_styles as $art_style) {
 									$style_name = $art_style->name;

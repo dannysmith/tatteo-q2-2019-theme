@@ -1,3 +1,16 @@
+function addTaxonomiesSelectedToQuery(taxonomy, query) {
+	if (typeof query.taxonomy === 'undefined') {
+		query.taxonomy = [];
+	}
+	let taxonomy_input = taxonomy.querySelectorAll('input');
+	taxonomy_input.forEach(function(element) {
+		if (element.checked === true) {
+			query.taxonomy.push(element.value);
+		}
+	});
+	return query;
+}
+
 (function($) {
 	// Add event handler to all the post type buttons/tabs at the top
 	$('.post-type-button').on('touchstart click', function(event) {
@@ -21,7 +34,6 @@
 	//Event handled for every taxonomy button
 	$('.taxonomies-button').on('touchstart click', function(event) {
 		event.preventDefault();
-
 		//Toggles the taxonomy dropdown for the clicked button, while hiding the other forms
 		let taxonomyForms = document.querySelectorAll('.taxonomy-form');
 		taxonomyForms.forEach(function(element) {
@@ -40,5 +52,4 @@
 			}
 		});
 	});
-});
-jQuery;
+})(jQuery);

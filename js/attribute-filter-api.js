@@ -3,17 +3,19 @@ function addTaxonomiesSelectedToQuery(taxonomy, query) {
 		query.taxonomy = [];
 	}
 	let taxonomyInput = taxonomy.querySelectorAll('input');
+	let tempArray = [];
 	taxonomyInput.forEach(function(element) {
 		if (element.checked === true) {
-			query.taxonomy.push(element.value);
+			tempArray.push(element.value);
 		}
 	});
+	query.taxonomy.push(tempArray);
 	return query;
 }
 
 (function($) {
 	//Get all data from inputs on submit click
-	$('#searchsubmit').on('touchstart click', function(event) {
+	$('#searchsubmit').click(function(event) {
 		event.preventDefault();
 		let query = {};
 		//Get post types
@@ -55,17 +57,25 @@ function addTaxonomiesSelectedToQuery(taxonomy, query) {
 		addTaxonomiesSelectedToQuery(tools, query);
 
 		console.log(query);
+		let content = document.querySelector('#main');
+		let bormData = $('#attributes').serialize();
+		let formData = JSON.stringify(bormData);
 
 		$.ajax({
-			url: ajaxurl,
-			method: 'GET',
-			crossDomain: true,
-			contentType: 'application/json',
-			beforeSend: function(xhr) {
-				xhr.setRequestHeader('X-WP-Nonce', tatteo_vars.wpapi_nonce);
+			type: 'POST',
+			url: api_vars.ajaxurl,
+			data: {
+				action: api_vars.action,
+				query: JSON.parse(formData)
+			},
+			success: function(response) {
+				console.log(response);
+				$(content).empty();
+				$(content).append(response);
+			},
+			error: function(errorThrown) {
+				alert(errorThrown);
 			}
-		})
-			.done(function(data) {})
-			.fail();
+		});
 	});
 })(jQuery);
