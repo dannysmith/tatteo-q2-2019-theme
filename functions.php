@@ -145,8 +145,10 @@ function tatteo_scripts()
 
 	wp_enqueue_script('tatteo-attribute-filter-toggle', get_template_directory_uri() . '/js/attribute-filter-toggle.js', array(), '20151215', true);
 
+	wp_enqueue_script('tatteo-attribute-filter-api', get_template_directory_uri() . '/js/attribute-filter-api.js', array(), '20151215', true);
+
 	wp_localize_script(
-		'tatteo-attribute-filter-toggle',
+		'tatteo-attribute-filter-api',
 		'tatteo_vars',
 		array(
 			'nonce' => wp_create_nonce('wp_rest'),
