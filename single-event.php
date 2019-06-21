@@ -1,0 +1,71 @@
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package Tatteo
+ */
+
+get_header();
+?>
+<!-- PLACEHOLDER CODE --->
+<div class="event-page">
+<section class="content-header">
+    <div class="event-rating artist-rating">
+        <h2>London Tattoo Convention</h2>
+        <!-- ***** --->
+    </div>
+    <a class="get-tickets white-link">Get Tickets</a>
+</section>
+<section class="hero-section">
+    <div class="image-area-wrapper">
+        <img src="https://thelondontattooconvention.com/media/4856/benjamin-laukis-poster-2019-web.jpg" class="artist-photo">
+            <h2 class="headings-box">London Tattoo Convention</h2> <!--Event Name --->
+            <div class="star-rating"></div> <!-- the rating --->
+            <p class="date headings-box">September 27.-29. 2019</p>
+            <p class="bio event-description headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <!-- Bio --->
+    </div> <!-- image area wrapper --->
+    <div class="hero-side-content">
+        <a class="get-tickets large-link white-link">Get Tickets</a>
+    </div> <!-- hero side content --->
+</section>
+</div>
+<section class="reviews">
+    <h2 class="headings-box">Reviews</h2>
+    <ul class="reviews-grid grid-container ">
+        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+    </ul>
+    </section>
+
+
+
+
+
+<!-- PLACEHOLDER CODE --->
+
+
+
+
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', get_post_type() );
+
+            the_post_navigation();
+
+		endwhile; // End of the loop.
+		?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();

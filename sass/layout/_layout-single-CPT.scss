@@ -1,7 +1,6 @@
 @import '../variables-site/variables-site';
 
-.artist-page {
-	//this styles the small header of the artist profile
+	//this styles the small header of all CPTs
 	.content-header {
 		border-bottom: 4px solid black;
 		display: flex;
@@ -11,30 +10,42 @@
 			@include font-size;
 		}
 	}
-}
 
-div.image-area-wrapper {
-	//this styles the image and the text on top of it
+
+div.image-area-wrapper { 	//this styles the image and the text on top of it
 	width: max-content;
 	position: relative;
 	z-index: -1;
 	height: min-content;
 	img {
 		max-width: 700px;
+		max-height:600px;
 	}
-	h2 {
+	h2 { //This styles all headers
 		position: absolute;
 		top: 5%;
 		left: 100%;
 		transform: translate(-50%, 0);
 	}
-	p {
+	p { //This styles artist and studio bio only
 		font-size: 0.8rem;
-		width: 30vw;
+		max-width: 30vw;
 		position: absolute;
 		top: 100%;
 		left: 10%;
 		transform: translate(0, -50%);
+	}
+	.date { //event only
+		position: absolute;
+		top: 22%;
+		left: 100%;
+		transform: translate(-50%, 0);
+	}
+	.event-description { //event only
+		position: absolute;
+		top:70%;
+		left: 100%;
+		transform: translate(-50%, 0);
 	}
 }
 
@@ -67,15 +78,21 @@ div.image-area-wrapper {
 	}
 }
 
-.get-in-touch {
-	background-image: url(../../img-artist/link-button.png);
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.8em;
+
+.get-in-touch,
+.get-tickets {
+    background-image: url(../../img-artist/link-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8em;
+}
+
+.get-tickets.large-link {
+	@include font-size;
 }
 
 .gallery {
