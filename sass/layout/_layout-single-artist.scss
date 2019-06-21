@@ -1,14 +1,13 @@
 @import '../variables-site/variables-site';
 
-.artist-page { //this styles the small header of the artist profile
-    > section.content-header {
-        border-bottom: 4px solid black;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        > a {
-            font-size:.8rem;
-        }
+ //this styles the small header of the artist profile
+section.content-header {
+    border-bottom: 4px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    > a {
+      font-size:.8rem;
     }
 }
 
@@ -60,7 +59,8 @@ div.image-area-wrapper { //this styles the image and the text on top of it
     }
 }
 
-.get-in-touch {
+.get-in-touch,
+.get-tickets {
     background-image: url(../../img-artist/link-button.png);
     background-size: contain;
     background-position: center;
