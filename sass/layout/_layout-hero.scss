@@ -1,0 +1,45 @@
+@import '../variables-site/variables-site';
+
+.hero {
+	min-height: calc(100vh - 100px);
+	margin: 0 -15px;
+	padding: 5% 15px 15px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	
+	&-headlines {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		width: 95%;
+		margin: 0 auto;
+	}
+	
+	&-headline {
+		display: inline-block;
+		background-color: $color__background-body;
+		padding: 6px $layout__indent-large;
+		@include black-border-thick;
+		margin-bottom: $layout__indent-large;
+		@include font-size(2.6);
+		letter-spacing: 2px;
+		font-style: italic;
+		font-weight: 700;
+		text-align: center;
+	}
+	
+	&-button {
+		background-color: $color__background-body;
+		@include black-border-thick;
+		display: block;
+		margin: 0 auto 5%;
+		letter-spacing: 1px;
+		text-align: center;
+		padding: 5px 60px;
+		font-weight: 700;
+	}
+}
