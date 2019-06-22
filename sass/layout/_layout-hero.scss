@@ -10,12 +10,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
+	border-bottom: 4px solid #000;
 	
 	&-headlines {
 		display: flex;
 		align-items: flex-start;
 		flex-direction: column;
-		width: 95%;
+		width: 90%;
 		margin: 0 auto;
 	}
 	
@@ -23,17 +24,21 @@
 		display: inline-block;
 		background-color: $color__background-body;
 		padding: 6px $layout__indent-large;
-		@include black-border-thick;
 		margin-bottom: $layout__indent-large;
+		@include black-border-thick;
 		@include font-size(2.6);
 		letter-spacing: 2px;
 		font-style: italic;
 		font-weight: 700;
 		text-align: center;
+		
+		@media screen and (max-width: 800px) { 
+			@include font-size(1.9);
+		}		
 	}
 	
 	&-button {
-		background-color: $color__background-body;
+		background-color: $color__background-button;
 		@include black-border-thick;
 		display: block;
 		margin: 0 auto 5%;
@@ -41,5 +46,11 @@
 		text-align: center;
 		padding: 5px 60px;
 		font-weight: 700;
+		transition: 300ms background ease-out, 300ms color ease-out;
+		
+		&:hover {
+			background-color: $color__background-button--hover;
+			color: $color__text-button--hover; 
+		}
 	}
 }
