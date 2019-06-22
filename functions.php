@@ -72,6 +72,7 @@ if ( ! function_exists( 'tatteo_setup' ) ) :
 
 		// Set theme image sizes
 		add_image_size( 'site-logo', 99999, 60, false ); // 60 pixels height (and unlimited width)
+		add_image_size( 'content-hero', 1280, 9999999, false ); // 1280 pixels wide (and unlimited height)
 
 		/**
 		 * Add support for core custom logo.
@@ -125,7 +126,7 @@ function tatteo_scripts() {
 
 	wp_enqueue_style( 'tatteo-style', get_template_directory_uri() . '/build/css/style.css', array());
 
-	wp_enqueue_style( 'tatteo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap', false );
+	wp_enqueue_style( 'tatteo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700i&display=swap', false );
 
 	wp_enqueue_style( 'inhabitents-fontawesome', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css', array());
 
