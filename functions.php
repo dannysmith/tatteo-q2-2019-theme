@@ -155,7 +155,7 @@ function tatteo_scripts()
 		'api_vars',
 		array(
 			'ajaxurl' => admin_url('admin-ajax.php'),
-			'nonce' => wp_create_nonce('wp_rest'),
+			'nonce' => wp_create_nonce('ajax'),
 			'action' => 'update_search_filter'
 		)
 	);
@@ -172,18 +172,90 @@ add_action('wp_ajax_update_search_filter', 'update_search_filter');
 add_action('wp_ajax_update_search_filter', 'update_search_filter');
 function update_search_filter()
 {
-	echo "<pre>";
-	$test = array();
-	parse_str($_POST[query], $test);
-	print_r($test);
-	print_r($test[name]);
-	echo "</pre>";
+	function proper_parse_str($str)
+	{
+		# result array
+		$arr = array();
+
+		# split on outer delimiter
+		$pairs = explode('&', $str);
+
+		# loop through each pair
+		foreach ($pairs as $i) {
+			# split into name and value
+			list($name, $value) = explode('=', $i, 2);
+
+			# if name already exists
+			if (isset($arr[$name])) {
+				# stick multiple values into an array
+				if (is_array($arr[$name])) {
+					$arr[$name][] = $value;
+				} else {
+					$arr[$name] = array($arr[$name], $value);
+				}
+			}
+			# otherwise, simply stick it in a scalar
+			else {
+				$arr[$name] = $value;
+			}
+		}
+
+		# return result array
+		return $arr;
+	}
+
+	$query = proper_parse_str($_POST['query']);
+	print_r($query);
+	print_r($query[location]);
+
 
 	$args = array(
-		'post_type' => $__POST[post_type],
+		'post_type' => $query[post_type],
+		's' => $query[name],
+		'meta_query'	=> array(
+			array(
+				'key'		=> 'location',
+				'value'		=> $query[location],
+				'compare'	=> 'LIKE'
+			)
+		),
+		'meta_query'	=> array(
+			'relation' => 'AND',
+			array(
+				'key'		=> 'date_from',
+				'value'		=> $query[date_from],
+				'compare'	=> '<'
+			),
+
+			array(
+				'key'		=> 'date_to',
+				'value'		=> $query[date_to],
+				'compare'	=> '>'
+			)
+		),
+		"tax_query" => array(
+
+			"relation" => "AND",
+
+			array(
+				"taxonomy" => "tools",
+				"terms" => $query[tools]
+			),
+
+			array(
+				"taxonomy" => "art_style",
+				"terms" => $query[comission],
+				"operator" => "AND"
+			),
+			array(
+				"taxonomy" => "comission",
+				"terms" => $query[art_style],
+				"operator" => "AND"
+			),
+
+		),
+
 	);
-
-
 	// The Query
 	$the_query = new WP_Query($args);
 
@@ -192,13 +264,14 @@ function update_search_filter()
 		echo '<ul>';
 		while ($the_query->have_posts()) {
 			$the_query->the_post();
-			echo '<li>' . get_the_title() . '</li>';
+			get_template_part('template-parts/content', 'search-single');
 		}
 		echo '</ul>';
 		/* Restore original Post Data */
 		wp_reset_postdata();
 	} else {
 		// no posts found
+		echo '<p> Sorry, no posts matched your criteria. </p>';
 	}
 };
 
