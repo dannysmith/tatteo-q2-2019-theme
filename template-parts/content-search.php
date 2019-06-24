@@ -7,29 +7,31 @@
  * @package Tatteo
  */
 
+$post_type = get_post_type(get_the_ID());
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			tatteo_posted_on();
-			tatteo_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php tatteo_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php tatteo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<a href=" <?php echo get_the_permalink() ?>" class="search-result-wrapper">
+		<?php if (!empty(get_field())); { ?>
+			<!-- Replace with image field -->
+			<img src="<?php echo the_field(); ?>" alt=" featured image of the <?php echo $post_type ?>">
+		<?php } else {
+		echo '<p No photos yet </p>';
+	} ?>
+		<div class="search-result-text">
+			<div class="search-result-header">
+				<!-- Replace with name field -->
+				<h2><?php echo get_field(); ?></h2>
+				<!-- Replace with location field -->
+				<h3><?php echo get_field(); ?></h3>
+			</div>
+			<div class="search-result-footer">
+				<!-- Replace with comission term -->
+				<?php if (!empty(get_field())); { ?>
+					<p><?php echo get_field(); ?></p>
+				<?php } ?>
+				<!-- Replace with rating -->
+				<p></p>
+			</div>
+		</div>
+	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
