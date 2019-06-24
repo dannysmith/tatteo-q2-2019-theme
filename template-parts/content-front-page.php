@@ -23,7 +23,8 @@
   <h2 class="featured-title headings-box">Featured Artists</h2>
   <div class="featured-gallery">
     <div class="featured-item featured-one">
-      <img src="https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png">
+    <div class="featured-image">
+      </div>
       <div class="featured-information">
         <p class="featured-name">John Doe</p>
         <p class="featured-location">Paris, France</p>
@@ -31,39 +32,105 @@
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item One -->
 <div class="featured-item featured-two">
-      <img src="https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png">
+      <div class="featured-image">
+      </div>
       <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
+        <p class="featured-name">Liza Doe</p>
+        <p class="featured-location">Marseilles, France</p>
         <p class="featured-rating">*****</p>
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Two -->
 <div class="featured-item featured-three">
-      <img src="https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png">
+<div class="featured-image">
+      </div>
       <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
+        <p class="featured-name">Laura Doe</p>
+        <p class="featured-location">Bordeaux, France</p>
         <p class="featured-rating">*****</p>
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Three -->
-<div class="featured-item featured-one">
-      <img src="https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png">
+<div class="featured-item featured-four">
+<div class="featured-image">
+      </div>
       <div class="featured-information">
         <p class="featured-name">John Doe</p>
         <p class="featured-location">Paris, France</p>
         <p class="featured-rating">*****</p>
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Four -->
-<div class="featured-item featured-two">
-      <img src="https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png">
+<div class="featured-item featured-five">
+<div class="featured-image">
+      </div>
       <div class="featured-information">
         <p class="featured-name">John Doe</p>
         <p class="featured-location">Paris, France</p>
         <p class="featured-rating">*****</p>
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Five -->
+<div class="featured-item featured-six">
+<div class="featured-image">
+      </div>
+      <div class="featured-information">
+        <p class="featured-name">John Doe</p>
+        <p class="featured-location">Paris, France</p>
+        <p class="featured-rating">*****</p>
+</div> <!-- Featured Information -->
+</div> <!-- Featured Item Six -->
+  </div> <!-- Featured Gallery -->
+</section>
+
+
+<section class="featured-Studio featured-section">
+  <h2 class="featured-title headings-box">Featured Studios</h2>
+  <div class="featured-gallery">
+    <div class="featured-item featured-one">
+    <div class="featured-image">
+      </div>
+      <div class="featured-information">
+        <p class="featured-name">John Doe</p>
+        <p class="featured-location">Paris, France</p>
+        <p class="featured-rating">*****</p>
+</div> <!-- Featured Information -->
+</div> <!-- Featured Item One -->
+<div class="featured-item featured-two">
+      <div class="featured-image">
+      </div>
+      <div class="featured-information">
+        <p class="featured-name">Liza Doe</p>
+        <p class="featured-location">Marseilles, France</p>
+        <p class="featured-rating">*****</p>
+</div> <!-- Featured Information -->
+</div> <!-- Featured Item Two -->
 <div class="featured-item featured-three">
-      <img src="https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png">
+<div class="featured-image">
+      </div>
+      <div class="featured-information">
+        <p class="featured-name">Laura Doe</p>
+        <p class="featured-location">Bordeaux, France</p>
+        <p class="featured-rating">*****</p>
+</div> <!-- Featured Information -->
+</div> <!-- Featured Item Three -->
+<div class="featured-item featured-four">
+<div class="featured-image">
+      </div>
+      <div class="featured-information">
+        <p class="featured-name">John Doe</p>
+        <p class="featured-location">Paris, France</p>
+        <p class="featured-rating">*****</p>
+</div> <!-- Featured Information -->
+</div> <!-- Featured Item Four -->
+<div class="featured-item featured-five">
+<div class="featured-image">
+      </div>
+      <div class="featured-information">
+        <p class="featured-name">John Doe</p>
+        <p class="featured-location">Paris, France</p>
+        <p class="featured-rating">*****</p>
+</div> <!-- Featured Information -->
+</div> <!-- Featured Item Five -->
+<div class="featured-item featured-six">
+<div class="featured-image">
+      </div>
       <div class="featured-information">
         <p class="featured-name">John Doe</p>
         <p class="featured-location">Paris, France</p>
