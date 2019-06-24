@@ -1,7 +1,7 @@
 @import '../variables-site/variables-site';
+@import '../mixins/mixins-master';
 
-.artist-page {
-	//this styles the small header of the artist profile
+	//this styles the small header of all CPTs
 	.content-header {
 		border-bottom: 4px solid black;
 		display: flex;
@@ -11,30 +11,42 @@
 			@include font-size;
 		}
 	}
-}
 
-div.image-area-wrapper {
-	//this styles the image and the text on top of it
-	width: max-content;
+
+div.image-area-wrapper { 	//this styles the image and the text on top of it
 	position: relative;
 	z-index: -1;
+	width: max-content;
 	height: min-content;
-	img {
+	img { // ALL hero images
 		max-width: 700px;
+		max-height:600px;
 	}
-	h2 {
+	h2 { // ALL headers
 		position: absolute;
 		top: 5%;
 		left: 100%;
 		transform: translate(-50%, 0);
 	}
-	p {
+	.star-rating { // ALL
+		@extend h2;
+		top:20%;
+	}
+	.date { // EVENT only
+		@extend h2;
+		top: 27%;
+	}
+	p { // ARTIST and STUDIO bio only
 		font-size: 0.8rem;
 		width: 30vw;
 		position: absolute;
 		top: 100%;
 		left: 10%;
 		transform: translate(0, -50%);
+	}
+	.event-description { // EVENT only
+		@extend h2;
+		top:70%;
 	}
 }
 
@@ -56,7 +68,8 @@ div.image-area-wrapper {
 
 .hero-side-content {
 	margin-bottom: 5vh;
-	height: 70vh;
+	max-height: 650px;
+	min-height: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -66,16 +79,27 @@ div.image-area-wrapper {
 		height: 76px;
 	}
 }
+.get-in-touch,
+.get-tickets {
+    background-image: url(../../img-artist/link-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+		justify-content: center;
+		width:min-content;
+		padding: 2em 4em;
+		white-space: nowrap;
+}
 
-.get-in-touch {
-	background-image: url(../../img-artist/link-button.png);
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.8em;
+.event-side-content{
+	@extend .hero-side-content;
+	justify-content: flex-end;
+	.get-tickets.large-link {
+		font-size: 2rem;
+		padding: 3em 6em;
+	}
 }
 
 .gallery {
