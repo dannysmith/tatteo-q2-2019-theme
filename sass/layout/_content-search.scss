@@ -1,0 +1,5 @@
+.search-result-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	@include black-border-thick;
+}
