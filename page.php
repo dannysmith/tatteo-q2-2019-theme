@@ -19,9 +19,6 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-			
-		get_template_part( 'template-parts/content', 'hero' );
-			
 		while ( have_posts() ) :
 			the_post();
 
