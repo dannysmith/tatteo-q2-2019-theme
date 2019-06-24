@@ -7,7 +7,7 @@
             "label": "Title",
             "name": "title",
             "type": "text",
-            "instructions": "Add the event title here.",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,7 +16,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "Add the event title here.",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -50,7 +50,7 @@
             "label": "Description",
             "name": "description",
             "type": "textarea",
-            "instructions": "Add a description of the event.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -70,7 +70,7 @@
             "name": "date",
             "type": "date_picker",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -100,7 +100,7 @@
         },
         {
             "key": "field_5d10c605dbb84",
-            "label": "Event Website (Optional)",
+            "label": "Event Website",
             "name": "event_website",
             "type": "url",
             "instructions": "Add a link here if you want to link to an events external website.",
@@ -113,25 +113,6 @@
             },
             "default_value": "",
             "placeholder": ""
-        },
-        {
-            "key": "field_5d10d3dd70909",
-            "label": "Link to where you can buy tickets (Optional)",
-            "name": "link_to_where_you_can_buy_tickets_optional",
-            "type": "text",
-            "instructions": "Add a link to where users can buy tickets.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -151,5 +132,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561383951
+    "modified": 1561380460
 }
