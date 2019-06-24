@@ -15,6 +15,10 @@
   border-bottom: 4px solid $color__border;
 }
 
+.featured-section-wrapper{
+  margin:150px 0 100px;
+}
+
 .featured-title{
   position:absolute;
   position: absolute;
@@ -28,8 +32,8 @@
   margin:0 auto;
   display: grid;
   grid-template-columns: repeat(3, calc(33% - 40px));
-  grid-template-rows: repeat(2, 450px);
-  grid-gap: 30px 66px;
+  grid-template-rows:450px;
+  grid-gap:66px;
 }
 
 .featured-information {
@@ -69,22 +73,5 @@
 .featured-three {
   .featured-image{
     background-image:url("https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png");
-}
-}
-
-.featured-four {
-  .featured-image{
-    background-image:url("http://cdn5.tattooeasily.com/wp-content/uploads/2013/07/Paul-Booth.jpg");
-}
-}
-
-.featured-five {
-  .featured-image{
-    background-image:url("http://disappearinginknyc.com/wp-content/uploads/2014/05/the-tattooist.jpg");
-}
-}
-.featured-six {
-  .featured-image{
-    background-image:url("https://www.ocregister.com/wp-content/uploads/migration/o3m/o3mt2z-b88628391z.120160306110426000giif7ete.10.jpg?w=620");
 }
 }

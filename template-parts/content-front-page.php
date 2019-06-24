@@ -18,7 +18,7 @@
 
 	<div class="entry-content">
 
-
+<section class="featured-section-wrapper">
 <section class="featured-artist featured-section">
   <h2 class="featured-title headings-box">Featured Artists</h2>
   <div class="featured-gallery">
@@ -49,38 +49,11 @@
         <p class="featured-rating">*****</p>
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Three -->
-<div class="featured-item featured-four">
-<div class="featured-image">
-      </div>
-      <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
-        <p class="featured-rating">*****</p>
-</div> <!-- Featured Information -->
-</div> <!-- Featured Item Four -->
-<div class="featured-item featured-five">
-<div class="featured-image">
-      </div>
-      <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
-        <p class="featured-rating">*****</p>
-</div> <!-- Featured Information -->
-</div> <!-- Featured Item Five -->
-<div class="featured-item featured-six">
-<div class="featured-image">
-      </div>
-      <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
-        <p class="featured-rating">*****</p>
-</div> <!-- Featured Information -->
-</div> <!-- Featured Item Six -->
   </div> <!-- Featured Gallery -->
 </section>
 
 
-<section class="featured-Studio featured-section">
+<section class="featured-studio featured-section">
   <h2 class="featured-title headings-box">Featured Studios</h2>
   <div class="featured-gallery">
     <div class="featured-item featured-one">
@@ -110,35 +83,9 @@
         <p class="featured-rating">*****</p>
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Three -->
-<div class="featured-item featured-four">
-<div class="featured-image">
-      </div>
-      <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
-        <p class="featured-rating">*****</p>
-</div> <!-- Featured Information -->
-</div> <!-- Featured Item Four -->
-<div class="featured-item featured-five">
-<div class="featured-image">
-      </div>
-      <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
-        <p class="featured-rating">*****</p>
-</div> <!-- Featured Information -->
-</div> <!-- Featured Item Five -->
-<div class="featured-item featured-six">
-<div class="featured-image">
-      </div>
-      <div class="featured-information">
-        <p class="featured-name">John Doe</p>
-        <p class="featured-location">Paris, France</p>
-        <p class="featured-rating">*****</p>
-</div> <!-- Featured Information -->
-</div> <!-- Featured Item Six -->
   </div> <!-- Featured Gallery -->
 </section>
+</section> <!-- Featured Section Wrapper -->
     <?php
     /*
 		the_content();
