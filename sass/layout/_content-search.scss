@@ -1,0 +1,38 @@
+.search-result-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	max-width: 45%;
+	margin: 2em;
+	height: 250px;
+
+	img {
+		width: 50%;
+		object-fit: cover;
+		border-right: 6px solid #000;
+	}
+	@include black-border-thick;
+
+	.search-result-text {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0.5em 1.5em;
+
+		.search-result-header {
+			h2 {
+				margin-bottom: 0;
+			}
+
+			h3 {
+				margin-top: 0;
+			}
+		}
+
+		.search-result-footer {
+			p {
+				margin: 0;
+			}
+		}
+	}
+}
