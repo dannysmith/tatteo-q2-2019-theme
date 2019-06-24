@@ -10,9 +10,9 @@
 get_header();
 ?>
 <!-- PLACEHOLDER CODE --->
-<div class="artist-page">
+<div class="custom-post-page">
 <section class="content-header">
-    <div class="artist-rating">
+    <div class="custom-post-rating">
         <h2>John Doe</h2>
         <!-- ***** --->
     </div>
@@ -20,7 +20,7 @@ get_header();
 </section>
 <section class="hero-section">
     <div class="image-area-wrapper">
-        <img src="https://assets.rebelcircus.com/blog/wp-content/uploads/2015/05/tattoo1.jpg" class="artist-photo">
+        <img src="https://assets.rebelcircus.com/blog/wp-content/uploads/2015/05/tattoo1.jpg" class="custom-post-photo">
             <h2 class="headings-box">John Doe</h2> <!--Artist name --->
             <div class="star-rating"></div> <!-- the rating --->
             <p class="bio headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <!-- Bio --->
