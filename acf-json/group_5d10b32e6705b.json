@@ -79,10 +79,10 @@
         },
         {
             "key": "field_5d10b49418733",
-            "label": "Bio",
-            "name": "bio",
+            "label": "Description",
+            "name": "description",
             "type": "textarea",
-            "instructions": "Add a short bio to tell others about your studio.",
+            "instructions": "Add a short description to tell others about your studio.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -252,6 +252,84 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5d10bba4e4257",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "group",
+            "instructions": "Add a links to your social media. (Optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d10bc9be425b",
+                    "label": "Instagram",
+                    "name": "instagram",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d10bcbbe425c",
+                    "label": "Twitter",
+                    "name": "twitter",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url"
+                },
+                {
+                    "key": "field_5d10bcc7e425d",
+                    "label": "Facebook",
+                    "name": "facebook",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_5d10bcd8e425e",
+                    "label": "Your Portfolio",
+                    "name": "portfolio",
+                    "type": "link",
+                    "instructions": "Add a link to your online portfolio if you have one.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
         }
     ],
     "location": [
@@ -286,5 +364,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561376450
+    "modified": 1561378070
 }

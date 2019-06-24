@@ -126,10 +126,10 @@
         },
         {
             "key": "field_5d0a4022f9a25",
-            "label": "Photo Gallery",
+            "label": "Gallery",
             "name": "gallery",
             "type": "repeater",
-            "instructions": "Add some images to your gallery",
+            "instructions": "Add some images to your gallery (max. 6)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -145,7 +145,7 @@
             "sub_fields": [
                 {
                     "key": "field_5d10ac341572d",
-                    "label": "",
+                    "label": "Images",
                     "name": "gallery",
                     "type": "image",
                     "instructions": "",
@@ -166,6 +166,87 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d10bba4e4257",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "group",
+            "instructions": "Add a links to your social media. (Optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d10bc9be425b",
+                    "label": "Instagram",
+                    "name": "instagram",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d10bcbbe425c",
+                    "label": "Twitter",
+                    "name": "twitter",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d10bcc7e425d",
+                    "label": "Facebook",
+                    "name": "facebook",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d10bcd8e425e",
+                    "label": "Your Portfolio",
+                    "name": "portfolio",
+                    "type": "url",
+                    "instructions": "Add a link to your online portfolio if you have one.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         }
@@ -202,5 +283,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561376930
+    "modified": 1561378401
 }
