@@ -11,24 +11,39 @@ $post_type = get_post_type(get_the_ID());
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a href=" <?php echo get_the_permalink() ?>" class="search-result-wrapper">
-		<?php if (!empty(get_field())); { ?>
-			<!-- Replace with image field -->
-			<img src="<?php echo the_field(); ?>" alt=" featured image of the <?php echo $post_type ?>">
-		<?php } else {
-		echo '<p No photos yet </p>';
-	} ?>
+		<!-- Check if post type is artist, if so get profile picture -->
+		<?php if (get_post_type() === 'artist') {
+			$profile_picture = get_field('profile_picture'); ?>
+			<?php if ($profile_picture) { ?>
+				<img src="<?php echo $profile_picture['url']; ?>" alt="<?php echo $profile_picture['alt']; ?>" />
+			<?php } else {
+			echo '<p> No photo yet </p>';
+		}
+		// Else post type is studi or event so get featured image
+	} else {
+		$featured_image = get_field('featured_image'); ?>
+			<?php if ($featured_image) { ?>
+				<img src="<?php echo $featured_image['url']; ?>" alt="<?php echo $featured_image['alt']; ?>" />
+			<?php } else {
+			echo '<p> No photo yet </p>';
+		}
+	}
+	?>
 		<div class="search-result-text">
 			<div class="search-result-header">
 				<!-- Replace with name field -->
-				<h2><?php echo get_field(); ?></h2>
+				<h2><?php the_field('name'); ?></h2>
 				<!-- Replace with location field -->
-				<h3><?php echo get_field(); ?></h3>
+				<h3><?php the_field('city'); ?>, <?php the_field('country'); ?></h3>
 			</div>
 			<div class="search-result-footer">
 				<!-- Replace with comission term -->
-				<?php if (!empty(get_field())); { ?>
-					<p><?php echo get_field(); ?></p>
-				<?php } ?>
+				<p>
+					<?php $commission_term = get_field('commission'); ?>
+					<?php if ($commission_term) : ?>
+						<?php echo $commission_term->name; ?>
+					<?php endif; ?>
+				</p>
 				<!-- Replace with rating -->
 				<p></p>
 			</div>
