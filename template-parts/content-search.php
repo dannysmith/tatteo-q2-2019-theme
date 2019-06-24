@@ -7,12 +7,12 @@
  * @package Tatteo
  */
 
+$post_type = get_post_type(get_the_ID());
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a href=" <?php echo get_the_permalink() ?>" class="search-result-wrapper">
 		<!-- Replace with image field -->
-		<img src='https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500'>
+		<img src='https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500' alt="featured image of the <?php echo $post_type ?>">
 		<div class="search-result-text">
 			<div class="search-result-header">
 				<!-- Replace with name field -->
