@@ -34,6 +34,7 @@
   grid-template-columns: repeat(3, calc(33% - 40px));
   grid-template-rows:450px;
   grid-gap:66px;
+
 }
 
 .featured-information {
@@ -74,4 +75,8 @@
   .featured-image{
     background-image:url("https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png");
 }
+}
+
+.load-more {
+  margin-bottom: 50px;
 }

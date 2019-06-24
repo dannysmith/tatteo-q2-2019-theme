@@ -50,6 +50,7 @@
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Three -->
   </div> <!-- Featured Gallery -->
+  <a class="load-more get-in-touch white-link">Load More</a>
 </section>
 
 
@@ -84,6 +85,7 @@
 </div> <!-- Featured Information -->
 </div> <!-- Featured Item Three -->
   </div> <!-- Featured Gallery -->
+  <a class="load-more get-in-touch white-link">Load More</a>
 </section>
 </section> <!-- Featured Section Wrapper -->
     <?php
