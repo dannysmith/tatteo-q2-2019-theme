@@ -1,0 +1,45 @@
+// Artist Archive
+.page-title.archive {
+	width: 100%;
+	border-bottom: 4px solid #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	margin: 0;
+	text-transform: capitalize;
+}
+.archive-hero-image {
+	width: 100%;
+	border-bottom: 4px solid #000;
+}
+.archive.type-artist {
+	display: flex;
+	justify-content: space-between;
+	margin: 3em 5em;
+	align-items: center;
+	width: 80%;
+	@include black-border-thick;
+	img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-right: 6px solid #000;
+	}
+	.archive-result-text {
+		font-size: 28px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 30%;
+		p {
+			margin: 0;
+		}
+	}
+	.read-more {
+		color: white;
+		background: black;
+		font-size: 26px;
+		height: 100%;
+	}
+}

@@ -19,7 +19,7 @@
 
 <div class="custom-post-page">
 <section class="content-header">
-    <div class="custom-post-rating">
+    <div class="custom-post-header">
         <h2><?php the_field( 'studio_name' ); ?></h2>
         <p class="CPT-location"><?php the_field( 'city' )?>, <?php the_field( 'country' ) ?><p>
         <!-- ***** --->
@@ -39,12 +39,16 @@
     <?php } ?>
             <h2 class="headings-box"><?php the_field( 'studio_name' ); ?></h2> <!--Artist name --->
             <div class="star-rating"></div> <!-- the rating --->
-            <p class="accommodation">
-              <?php $accommodation_ids = get_field( 'accommodation' )?></p>
+            <?php if ( get_field( 'accommodation' ) == 1 ) {
+ echo  '<p class="accommodation headings-box">Accomodation Available</p>';
+} else {
+ // echo 'false';
+} ?>
             <p class="bio headings-box"><?php the_field( 'description' ); ?></p> <!-- Bio --->
     </div> <!-- image area wrapper --->
     <div class="hero-side-content">
         <div class="art-style">
+        <h2 class="headings-box">Styles</h2>
         <ul>
 						<?php
 						$art_style_terms = get_field( 'art_style' );
@@ -55,9 +59,10 @@
             endif;
 						?>
 					</ul>
-        </div> <!-- artist style --->
+        </div> <!-- studio style --->
 
         <div class="tools">
+        <h2 class="headings-box">Tools Available</h2>
         <ul>
         <?php $tools_terms = get_field( 'tools' );
         if ( $tools_terms ):
@@ -72,13 +77,27 @@
     </div> <!-- hero side content --->
 </section>
 </div>
-<section class="gallery">
-    <h2 class="headings-box">Gallery</h2>
-		<?php while (have_rows('gallery')) : the_row();?>
-    <?php $post_object = get_sub_field('gallery_image');?>
-    <?php echo  '<img src="'.$post_object.'>';
-	endwhile;
-	?>
-    </section>
+<section class="gallery-section-wrapper">
+    <h2 class="gallery-title headings-box">Gallery</h2>
+    <ul class="images-grid grid-container">
+		<li><?php $image_one = get_field( 'image_one' ); ?>
+<?php if ( $image_one ) { ?>
+	<img src="<?php echo $image_one['url']; ?>" alt="<?php echo $image_one['alt']; ?>" />
+<?php } ?></li>
+<li class="image-border"><?php $image_two = get_field( 'image_two' ); ?>
+<?php if ( $image_two ) { ?>
+	<img src="<?php echo $image_two['url']; ?>" alt="<?php echo $image_two['alt']; ?>" />
+<?php } ?></li>
+<li><?php $image_three = get_field( 'image_three' ); ?>
+<?php if ( $image_three ) { ?>
+	<img src="<?php echo $image_three['url']; ?>" alt="<?php echo $image_three['alt']; ?>" />
+<?php } ?></li>
+<li><?php $image_four = get_field( 'image_four' ); ?>
+<?php if ( $image_four ) { ?>
+	<img src="<?php echo $image_four['url']; ?>" alt="<?php echo $image_four['alt']; ?>" />
+<?php } ?></li>
+    </ul>
+</section>
+</section>
 
 </article><!-- #post-<?php the_ID(); ?> -->

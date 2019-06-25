@@ -17,7 +17,7 @@ $post_type = get_post_type(get_the_ID());
 			<?php if ($profile_picture) { ?>
 				<img src="<?php echo $profile_picture['url']; ?>" alt="<?php echo $profile_picture['alt']; ?>" />
 			<?php } else {
-			echo '<p> No photo yet </p>';
+			echo '<div class="no-photo"><p> No photo yet </p></div>';
 		}
 		// Else post type is studi or event so get featured image
 	} else {
@@ -25,7 +25,7 @@ $post_type = get_post_type(get_the_ID());
 			<?php if ($featured_image) { ?>
 				<img src="<?php echo $featured_image['url']; ?>" alt="<?php echo $featured_image['alt']; ?>" />
 			<?php } else {
-			echo '<p class="no-photo"> No photo yet </p>';
+			echo '<div class="no-photo"><p class="no-photo"> No photo yet </p></div>';
 		}
 	}
 	?>

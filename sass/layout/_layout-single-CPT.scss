@@ -36,6 +36,14 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 		left: 100%;
 		transform: translate(-50%, 0);
 	}
+	.accommodation {
+		font-weight:bold;
+		position: absolute;
+		top: 30%;
+		left: 100%;
+		transform: translate(-50%, 0);
+		width: 200px;
+	}
 	.star-rating { // ALL
 		@extend h2;
 		top:20%;
@@ -46,7 +54,7 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 	}
 	p { // ARTIST and STUDIO bio only
 		font-size: 0.8rem;
-		width: 30vw;
+		width: 500px;
 		position: absolute;
 		top: 100%;
 		left: 10%;
@@ -60,7 +68,7 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 
 .hero-section {
 	border-bottom: 4px solid black;
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -121,33 +129,43 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 }
 
 .gallery {
-	padding: 0 0 5vh 0;
-	border-bottom: 4px solid black;
+	padding:60px 0;
 }
 
 .images-grid {
-	height: 50vh;
+	height: 300px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 1.5rem;
 	margin: 0;
 	padding: 0;
+  z-index:-4;
+  margin-top:100px;
+  position:relative;
 	> li {
-		height: 50vh;
+		height: 300px;
 		> img {
 			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
 
-.reviews-grid {
-	height: 50vh;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1.5rem;
-	margin: 0;
-	padding: 0;
-	p {
-		width: 100%;
-	}
+.gallery-section-wrapper {
+	position: relative;
+	margin-bottom:200px;
+}
+
+.gallery-title{
+	position: absolute;
+  top: 0;
+  left: 20%;
+	transform: translate(0, -90%);
+	font-size: 3rem;
+	color:$color__border;
+	z-index: -2;
+}
+
+.image-border{
+	border:4px solid $color__border;
 }
