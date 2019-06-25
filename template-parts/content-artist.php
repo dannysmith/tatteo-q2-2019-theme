@@ -35,7 +35,7 @@
     </div> <!-- image area wrapper --->
     <div class="hero-side-content">
         <div class="artist-style">
-					<p class="headings-box">Styles</p>
+					<h2 class="headings-box">Styles</h2>
         <ul> <!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
 				<?php $art_style_terms = get_field( 'art_style' ); ?>
 <?php if ( $art_style_terms ): ?>
@@ -46,7 +46,7 @@
 					</ul>
 				</div> <!-- artist style --->
 				<div class="artist-social-media">
-					<p class="headings-box">Social</p>
+					<h2 class="headings-box">Social</h2>
 					<?php if ( have_rows( 'social_media' ) ) : ?>
 					<ul>
 	<?php while ( have_rows( 'social_media' ) ) : the_row(); ?>

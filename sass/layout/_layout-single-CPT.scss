@@ -155,6 +155,7 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 	transform: translate(0, -90%);
 	font-size: 3rem;
 	color:$color__border;
+	z-index: -2;
 }
 
 .image-border{
