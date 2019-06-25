@@ -17,7 +17,7 @@
 
 	<div class="custom-post-page">
 <section class="content-header">
-    <div class="custom-post-rating">
+    <div class="custom-post-header">
         <h2><?php the_field( 'name' ); ?></h2>
         <!-- ***** --->
     </div>
