@@ -98,7 +98,7 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": 500,
+            "maxlength": 0,
             "rows": "",
             "new_lines": ""
         },
@@ -120,7 +120,7 @@
             "add_term": 0,
             "save_terms": 1,
             "load_terms": 0,
-            "return_format": "id",
+            "return_format": "object",
             "multiple": 0,
             "allow_null": 0
         },
@@ -283,5 +283,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561378401
+    "modified": 1561387265
 }

@@ -10,6 +10,14 @@
 		> a {
 			@include font-size;
 		}
+		p {
+			margin:0;
+			@include font-size;
+			font-weight:bold;
+		}
+		h2 {
+			margin:0;
+		}
 	}
 
 
@@ -58,11 +66,21 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 	justify-content: space-between;
 }
 
-.artist-style {
+.art-style {
 	margin-top: 3vh;
 	li {
 		margin-left:auto;
 		margin-right:0;
+		text-align: right;
+	}
+}
+
+.tools {
+	margin-top: 3vh;
+	li {
+		margin-left:auto;
+		margin-right:0;
+		text-align: right;
 	}
 }
 
