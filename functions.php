@@ -205,74 +205,35 @@ function update_search_filter()
 	}
 
 	$query = proper_parse_str($_POST['query']);
-	print_r($query);
-	print_r($query[location]);
+	// print_r($query);
+	// print_r($query[post_type]);
 
+	foreach ($query[post_type] as $post_type) :
+		$args = array(
+			'post_type' => $post_type,
+			's' => $query[search],
+		);
+		// The Query
+		$the_query = new WP_Query($args);
 
-	$args = array(
-		'post_type' => $query[post_type],
-		's' => $query[name],
-		'meta_query'	=> array(
-			array(
-				'key'		=> 'location',
-				'value'		=> $query[location],
-				'compare'	=> 'LIKE'
-			)
-		),
-		'meta_query'	=> array(
-			'relation' => 'AND',
-			array(
-				'key'		=> 'date_from',
-				'value'		=> $query[date_from],
-				'compare'	=> '<'
-			),
+		// The Loop
+		if ($the_query->have_posts()) {
+			echo '<h1>' . ucwords($post_type) . '</h1>';
 
-			array(
-				'key'		=> 'date_to',
-				'value'		=> $query[date_to],
-				'compare'	=> '>'
-			)
-		),
-		"tax_query" => array(
-
-			"relation" => "AND",
-
-			array(
-				"taxonomy" => "tools",
-				"terms" => $query[tools]
-			),
-
-			array(
-				"taxonomy" => "art_style",
-				"terms" => $query[comission],
-				"operator" => "AND"
-			),
-			array(
-				"taxonomy" => "comission",
-				"terms" => $query[art_style],
-				"operator" => "AND"
-			),
-
-		),
-
-	);
-	// The Query
-	$the_query = new WP_Query($args);
-
-	// The Loop
-	if ($the_query->have_posts()) {
-		echo '<ul>';
-		while ($the_query->have_posts()) {
-			$the_query->the_post();
-			get_template_part('template-parts/content', 'search-single');
+			echo '<ul>';
+			while ($the_query->have_posts()) {
+				$the_query->the_post();
+				// Edit to use get_template_part for content search
+				get_template_part('template-parts/content', 'search-single');
+			}
+			echo '</ul>';
+			/* Restore original Post Data */
+			wp_reset_postdata();
+		} else {
+			// no posts found
+			echo '<p> Sorry, no posts matched your criteria. </p>';
 		}
-		echo '</ul>';
-		/* Restore original Post Data */
-		wp_reset_postdata();
-	} else {
-		// no posts found
-		echo '<p> Sorry, no posts matched your criteria. </p>';
-	}
+	endforeach;
 };
 
 /**
