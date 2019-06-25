@@ -26,7 +26,7 @@
           <p class="CPT-location"><?php the_field( 'location' ); ?></p>
         <!-- ***** --->
     </div>
-    <a class="get-in-touch white-link">Buy Tickets</a>
+    <a href="<?php the_field( 'event_website' ); ?>" class="get-in-touch white-link"><p>Website</p></a>
 </section>
 <section class="hero-section">
     <div class="image-area-wrapper">
@@ -38,10 +38,7 @@
             <p class="description bio headings-box"><?php the_field( 'description' ); ?></p> <!-- Bio --->
     </div> <!-- image area wrapper --->
     <div class="hero-side-content">
-
-            <h2><a href="<?php the_field( 'event_website' ); ?>">Visit Event Website</a></h2>
-
-        <a class="get-in-touch white-link">Buy Tickets</a>
+            <a href="<?php the_field( 'event_website' ); ?>" class="get-in-touch white-link"><p>Website</p></a>
     </div> <!-- hero side content --->
 </section>
 </div>
