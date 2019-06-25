@@ -73,7 +73,7 @@
 					</ul>
         </div> <!-- artist style --->
 
-        <a class="get-in-touch white-link">Get In Touch</a>
+        <a class="get-in-touch white-link">Get In Touch</a> <!-- SET UP CONTENT FORM -->
     </div> <!-- hero side content --->
 </section>
 </div>
