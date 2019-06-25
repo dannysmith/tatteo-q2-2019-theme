@@ -36,6 +36,14 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 		left: 100%;
 		transform: translate(-50%, 0);
 	}
+	.accommodation {
+		font-weight:bold;
+		position: absolute;
+		top: 30%;
+		left: 100%;
+		transform: translate(-50%, 0);
+		width: 200px;
+	}
 	.star-rating { // ALL
 		@extend h2;
 		top:20%;

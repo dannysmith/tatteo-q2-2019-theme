@@ -39,13 +39,17 @@
     <?php } ?>
             <h2 class="headings-box"><?php the_field( 'studio_name' ); ?></h2> <!--Artist name --->
             <div class="star-rating"></div> <!-- the rating --->
-            <p class="accommodation">
-              <?php $accommodation_ids = get_field( 'accommodation' )?></p>
+            <?php if ( get_field( 'accommodation' ) == 1 ) {
+ echo  '<p class="accommodation headings-box">Accomodation Available</p>';
+} else {
+ // echo 'false';
+} ?>
             <p class="bio headings-box"><?php the_field( 'description' ); ?></p> <!-- Bio --->
     </div> <!-- image area wrapper --->
     <div class="hero-side-content">
         <div class="art-style">
-        <ul> <!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
+        <h2 class="headings-box">Styles</h2>
+        <ul>
 						<?php
 						$art_style_terms = get_field( 'art_style' );
             if ( $art_style_terms ):
@@ -55,10 +59,11 @@
             endif;
 						?>
 					</ul>
-        </div> <!-- artist style --->
+        </div> <!-- studio style --->
 
         <div class="tools">
-        <ul><!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
+        <h2 class="headings-box">Tools Available</h2>
+        <ul>
         <?php $tools_terms = get_field( 'tools' );
         if ( $tools_terms ):
 	        foreach ( $tools_terms as $tools_term ):

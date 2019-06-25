@@ -106,51 +106,6 @@
             "allow_null": 0
         },
         {
-            "key": "field_5d0a4022f9a25",
-            "label": "Gallery",
-            "name": "gallery",
-            "type": "repeater",
-            "instructions": "Add some images to your gallery (max. 6)",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_5d10ac341572d",
-            "min": 0,
-            "max": 6,
-            "layout": "table",
-            "button_label": "+",
-            "sub_fields": [
-                {
-                    "key": "field_5d10ac341572d",
-                    "label": "Images",
-                    "name": "gallery",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                }
-            ]
-        },
-        {
             "key": "field_5d10bba4e4257",
             "label": "Social Media",
             "name": "social_media",
@@ -379,5 +334,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561468961
+    "modified": 1561473826
 }
