@@ -84,25 +84,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d10af0578748",
-            "label": "Biography",
-            "name": "biography",
-            "type": "textarea",
-            "instructions": "Add a short bit about yourself to help other get to know you.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": 0,
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_5d0a3ed0f9a24",
             "label": "Art Styles",
             "name": "art_style",
@@ -156,7 +137,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
@@ -184,22 +165,6 @@
             },
             "layout": "block",
             "sub_fields": [
-                {
-                    "key": "field_5d10bc9be425b",
-                    "label": "Instagram",
-                    "name": "instagram",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
                 {
                     "key": "field_5d10bcbbe425c",
                     "label": "Twitter",
@@ -233,6 +198,22 @@
                     "placeholder": ""
                 },
                 {
+                    "key": "field_5d10bc9be425b",
+                    "label": "Instagram",
+                    "name": "instagram",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
                     "key": "field_5d10bcd8e425e",
                     "label": "Your Portfolio",
                     "name": "portfolio",
@@ -249,6 +230,25 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5d10af0578748",
+            "label": "Biography",
+            "name": "biography",
+            "type": "textarea",
+            "instructions": "Add a short bit about yourself to help other get to know you.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 400,
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -283,5 +283,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561387265
+    "modified": 1561459484
 }
