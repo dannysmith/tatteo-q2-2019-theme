@@ -166,7 +166,7 @@
             "key": "field_5d10b59818738",
             "label": "Accommodation",
             "name": "accommodation",
-            "type": "taxonomy",
+            "type": "true_false",
             "instructions": "Do you provide accommodation to visiting artists?",
             "required": 0,
             "conditional_logic": 0,
@@ -175,14 +175,11 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "accomodation",
-            "field_type": "radio",
-            "allow_null": 0,
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "multiple": 0
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5d10b4ee18734",
@@ -209,10 +206,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_5d10b52518735",
-            "label": "Gallery",
-            "name": "gallery",
-            "type": "repeater",
+            "key": "field_5d12205817732",
+            "label": "Image One",
+            "name": "image_one",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -221,37 +218,88 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5d10b53118736",
-            "min": 0,
-            "max": 6,
-            "layout": "table",
-            "button_label": "+",
-            "sub_fields": [
-                {
-                    "key": "field_5d10b53118736",
-                    "label": "Image",
-                    "name": "gallery_image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                }
-            ]
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 300,
+            "min_height": 300,
+            "min_size": "",
+            "max_width": 900,
+            "max_height": 900,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d12209517733",
+            "label": "Image Two",
+            "name": "image_two",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 300,
+            "min_height": 300,
+            "min_size": "",
+            "max_width": 900,
+            "max_height": 900,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d12209717734",
+            "label": "Image Three",
+            "name": "image_three",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 300,
+            "min_height": 300,
+            "min_size": "",
+            "max_width": 900,
+            "max_height": 900,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d1220a717735",
+            "label": "Image Four",
+            "name": "image_four",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 300,
+            "min_height": 300,
+            "min_size": "",
+            "max_width": 900,
+            "max_height": 900,
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -286,5 +334,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561453232
+    "modified": 1561473810
 }

@@ -3,11 +3,49 @@
     "title": "Event",
     "fields": [
         {
+            "key": "field_5d10d3dd70909",
+            "label": "Link to where you can buy tickets (Optional)",
+            "name": "link_to_where_you_can_buy_tickets_optional",
+            "type": "text",
+            "instructions": "Add a link to where users can buy tickets.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d10c43bdf67b",
             "label": "Title",
             "name": "title",
             "type": "text",
             "instructions": "Add the event title here.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d122a60cbb54",
+            "label": "Location",
+            "name": "location",
+            "type": "text",
+            "instructions": "Add the event location here.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -113,25 +151,6 @@
             },
             "default_value": "",
             "placeholder": ""
-        },
-        {
-            "key": "field_5d10d3dd70909",
-            "label": "Link to where you can buy tickets (Optional)",
-            "name": "link_to_where_you_can_buy_tickets_optional",
-            "type": "text",
-            "instructions": "Add a link to where users can buy tickets.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -151,5 +170,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561386182
+    "modified": 1561471607
 }
