@@ -3,7 +3,7 @@
 
 .featured-section {
   z-index:-1;
-  margin-top:100px;
+  margin:100px 20px 0;
   position:relative;
   h2 {
     @include font-size(2.5);
@@ -27,7 +27,7 @@
 }
 
 .featured-gallery{
-  margin:0 auto;
+  margin:0;
   display: grid;
   grid-template-columns: repeat(3, calc(33% - 40px));
   grid-template-rows:450px;
@@ -38,7 +38,9 @@
     padding-bottom:20px;
   }
   article:nth-child(2) {
+    img {
     border:4px solid $color__border;
+    }
   }
   a {
     margin:0;
