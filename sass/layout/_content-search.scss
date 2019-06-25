@@ -1,10 +1,17 @@
 .search-result-wrapper {
 	display: flex;
 	justify-content: flex-start;
-	max-width: 45%;
-	margin: 2em;
+	align-content: center;
+	max-width: 70%;
+	margin: 2em auto;
 	height: 250px;
-
+	.no-photo {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		margin: 0 auto;
+	}
 	img {
 		width: 50%;
 		object-fit: cover;
