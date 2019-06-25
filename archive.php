@@ -17,7 +17,7 @@ get_header();
 
       <header class="page-header archive">
         <?php $queried_object = get_queried_object(); ?>
-        <h1 class="page-title archive"><?php echo $queried_object->name ?></h1>
+        <h1 class="page-title archive"><?php echo $queried_object->name ?>s</h1>
         <?php
         $archive_image = get_template_directory_uri() . '/img/2.png';
         if ($queried_object->name === 'artist') {
