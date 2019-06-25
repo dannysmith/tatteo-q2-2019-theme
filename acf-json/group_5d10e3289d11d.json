@@ -1,0 +1,110 @@
+{
+    "key": "group_5d10e3289d11d",
+    "title": "Front Page Featured",
+    "fields": [
+        {
+            "key": "field_5d10e573de477",
+            "label": "Featured Artists",
+            "name": "featured_artists",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5d10e58ade478",
+            "min": 3,
+            "max": 3,
+            "layout": "table",
+            "button_label": "Add Featured Artist",
+            "sub_fields": [
+                {
+                    "key": "field_5d10e58ade478",
+                    "label": "Featured Artist",
+                    "name": "featured_artist",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "artist"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_5d10e621de47b",
+            "label": "Featured Studio",
+            "name": "featured_studio",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5d10e62fde47c",
+            "min": 3,
+            "max": 3,
+            "layout": "table",
+            "button_label": "Add Studio",
+            "sub_fields": [
+                {
+                    "key": "field_5d10e62fde47c",
+                    "label": "Featured Studio",
+                    "name": "featured_studio",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "studio"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "701"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1561394183
+}
