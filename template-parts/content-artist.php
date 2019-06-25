@@ -25,7 +25,10 @@
 </section>
 <section class="hero-section">
     <div class="image-area-wrapper">
-        <img src="https://assets.rebelcircus.com/blog/wp-content/uploads/2015/05/tattoo1.jpg" class="custom-post-photo">
+		<?php $profile_picture = get_field( 'profile_picture' ); ?>
+<?php if ( $profile_picture ) { ?>
+	<img src="<?php echo $profile_picture['url']; ?>" alt="<?php echo $profile_picture['alt']; ?>" />
+<?php } ?>
             <h2 class="headings-box"><?php the_field( 'name' ); ?></h2> <!--Artist name --->
             <div class="star-rating"></div> <!-- the rating --->
             <p class="bio headings-box"><?php the_field( 'biography' ); ?></p> <!-- Bio --->
@@ -59,24 +62,28 @@
     </div> <!-- hero side content --->
 </section>
 </div>
-<section class="gallery">
-    <h2 class="headings-box">Gallery</h2>
+<section class="gallery-section-wrapper">
+    <h2 class="gallery-title headings-box">Gallery</h2>
     <ul class="images-grid grid-container">
-        <li><img src="http://www.fashionizm.com/wp-content/uploads/2017/04/back-dotwork-tattoo.jpg"></li>
-        <li><img src="http://www.dubuddha.org/wp-content/uploads/2018/01/Blackwork-Tattoo-on-Forearm-by-Yanina-Viland-305x304.jpg"></li>
-        <li><img src="http://tattoo-journal.com/wp-content/uploads/2016/08/blackwork-tattoo31-650x800.jpg"></li>
-        <li><img src="https://positivefox.com/wp-content/uploads/2018/09/geometric-blackwork-tattoos-blackwork-tattoo-blackwork-tattoo-meaning-730x540.jpg"></li>
+		<li><?php $image_one = get_field( 'image_one' ); ?>
+<?php if ( $image_one ) { ?>
+	<img src="<?php echo $image_one['url']; ?>" alt="<?php echo $image_one['alt']; ?>" />
+<?php } ?></li>
+<li class="image-border"><?php $image_two = get_field( 'image_two' ); ?>
+<?php if ( $image_two ) { ?>
+	<img src="<?php echo $image_two['url']; ?>" alt="<?php echo $image_two['alt']; ?>" />
+<?php } ?></li>
+<li><?php $image_three = get_field( 'image_three' ); ?>
+<?php if ( $image_three ) { ?>
+	<img src="<?php echo $image_three['url']; ?>" alt="<?php echo $image_three['alt']; ?>" />
+<?php } ?></li>
+<li><?php $image_four = get_field( 'image_four' ); ?>
+<?php if ( $image_four ) { ?>
+	<img src="<?php echo $image_four['url']; ?>" alt="<?php echo $image_four['alt']; ?>" />
+<?php } ?></li>
     </ul>
 </section>
-<section class="reviews">
-    <h2 class="headings-box">Reviews</h2>
-    <ul class="reviews-grid grid-container ">
-        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
-        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
-        <li><p class="headings-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
-    </ul>
-    </section>
-
+</section>
 
 
 
