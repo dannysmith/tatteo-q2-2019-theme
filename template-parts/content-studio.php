@@ -45,7 +45,7 @@
     </div> <!-- image area wrapper --->
     <div class="hero-side-content">
         <div class="art-style">
-        <ul> <!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
+        <ul>
 						<?php
 						$art_style_terms = get_field( 'art_style' );
             if ( $art_style_terms ):
@@ -58,7 +58,7 @@
         </div> <!-- artist style --->
 
         <div class="tools">
-        <ul><!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
+        <ul>
         <?php $tools_terms = get_field( 'tools' );
         if ( $tools_terms ):
 	        foreach ( $tools_terms as $tools_term ):
@@ -68,7 +68,7 @@
 					</ul>
         </div> <!-- artist style --->
 
-        <a class="get-in-touch white-link">Get In Touch</a>
+        <a class="get-in-touch white-link">Get In Touch</a> <!-- SET UP CONTENT FORM -->
     </div> <!-- hero side content --->
 </section>
 </div>
