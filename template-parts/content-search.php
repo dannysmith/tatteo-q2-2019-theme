@@ -29,12 +29,12 @@ $post_type = get_post_type(get_the_ID());
 		}
 	}
 	?>
-		<div class="search-result-text">
-			<div class="search-result-header">
+		<div class="search-result-text featured-information-wrapper">
+			<div class="search-result-header featured-information">
 				<!-- Replace with name field -->
-				<h2><?php the_field('studio_name'); the_field('name'); ?></h2>
+				<p><?php the_field('studio_name'); the_field('name'); ?></p>
 				<!-- Replace with location field -->
-				<h3><?php the_field('city'); ?>, <?php the_field('country'); ?></h3>
+				<p><?php the_field('city'); ?>, <?php the_field('country'); ?></p>
 			</div>
 			<div class="search-result-footer">
 				<!-- Replace with comission term -->

@@ -28,38 +28,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		<section class="featured-section-wrapper">
-<section class="featured-artist featured-section">
-  <h2 class="featured-title headings-box">Featured Artists</h2>
-<?php while (have_rows('featured_artists')) : the_row(); ?>
-			<?php $post_object = get_sub_field('featured_artist');
-			if ($post_object) :
-				// override $post
-				$post = $post_object;
-				setup_postdata($post);
-				get_template_part('template-parts/content', 'search');
-				wp_reset_postdata();
-				?>
-			<?php endif;
-	endwhile;
-	?>
-	</section> <!-- featured Artist -->
-	<section class="featured-studio featured-section">
-  <h2 class="featured-title headings-box">Featured Studios</h2>
-<?php while (have_rows('featured_studio')) : the_row(); ?>
-			<?php $post_object = get_sub_field('featured_studio');
-			if ($post_object) :
-				// override $post
-				$post = $post_object;
-				setup_postdata($post);
-				get_template_part('template-parts/content', 'search');
-				wp_reset_postdata();
-				?>
-			<?php endif;
-	endwhile;
-	?>
-	</section> <!-- featured artist -->
-</section> <!-- featured section wrapper --->
+
 
 
 

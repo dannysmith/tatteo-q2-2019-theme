@@ -27,56 +27,41 @@
   transform: translate(0, -90%);
 }
 
-
-.featured-gallery {
+.featured-gallery{
   margin:0 auto;
   display: grid;
   grid-template-columns: repeat(3, calc(33% - 40px));
   grid-template-rows:450px;
   grid-gap:66px;
-
-}
-
-.featured-information {
-  p {
-    font-weight: bold;
+  article {
+    height:100%;
+    width:100%;
+    padding-bottom:20px;
+  }
+  article:nth-child(2) {
+    border:4px solid $color__border;
+  }
+  a {
+    margin:0;
+    height:100%;
+    max-width:100%;
+    border:none;
+    display:flex;
+    flex-direction: column;
+    .featured-information-wrapper{
+      width:100%;
+      padding:10px;
+      font-weight:bold;
+    }
+    img {
+      border:none;
+      width:100%;
+      height:400px;
+      object-fit: cover;
+    }
+  }
+  p{
     margin:0;
   }
 }
 
-.featured-item {
-  img {
-    width:100%;
-    height:350px;
-  }
-}
-
-  .featured-image{
-    width:100%;
-    height:350px;
-    background-size:cover;
-    background-position:center;
-}
-
-.featured-one {
-  .featured-image{
-    background-image:url("https://video-images.vice.com/articles/5a95d25e97373f0006e0806f/lede/1519771779506-image2-2.jpeg?crop=1xw%3A0.8418xh%3B0xw%2C0.0026xh&resize=650%3A*&output-quality=55");
-}
-}
-
-.featured-two {
-  .featured-image{
-    background-image:url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_170/f_auto,q_auto,w_1100/v1556235608/shape/mentalfloss/70656-istock-919499636.jpg");
-    border: 4px solid $color__border;
-}
-}
-
-.featured-three {
-  .featured-image{
-    background-image:url("https://theculturetrip.com/wp-content/uploads/2018/02/tattoo-studios_fallen-heroes-min.png");
-}
-}
-
-.load-more {
-  margin-bottom: 50px;
-}
