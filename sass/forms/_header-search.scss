@@ -5,56 +5,58 @@
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: contain;
+	transition: width 300ms ease-in;
 	height: 30px;
-	width: 30px;	
+	width: 30px;
 	min-width: 30px;
 	overflow: hidden;
 	direction: rtl;
-	margin-right: $layout__indent-small;	
-		
+	margin-right: $layout__indent-small;
+
 	label {
 		display: block;
 		height: 100%;
 		cursor: pointer;
 	}
-						
-	input[type=search] {
-		outline:none;		
-		border: none;		
-		border-bottom: 4px solid $color__link-black;	
+
+	input[type='search'] {
+		outline: none;
+		border: none;
+		border-bottom: 4px solid $color__link-black;
 		padding: 0 5px 0 0;
 		margin: 0 55px 0 0;
 		background: transparent;
-	    color: $color__link-black;
-	    font-weight:700;
-	    text-transform: uppercase;
-	    font-size: 14px;		
+		color: $color__link-black;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 14px;
 		width: 0;
 		height: 30px;
-		transition: width 300ms ease-in;	
+		transition: width 300ms ease-in;
 		direction: ltr;
 	}
-	
+
 	@include placeholder {
-	    color: $color__link-black;
-	    font-weight:700;
-	    text-transform: uppercase;
+		color: $color__link-black;
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 
 	&.revealed {
 		width: 100%;
-		max-width: 250px;	
+		max-width: 250px;
 		overflow: visible;
-		
+		background-image: url(../../img/close.svg);
+
 		label {
 			cursor: default;
 		}
-			
-		input[type=search] {
+
+		input[type='search'] {
 			width: calc(100% - 55px);
 		}
 	}
-	
+
 	.search-submit {
 		display: none;
 	}
