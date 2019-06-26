@@ -10,18 +10,20 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
+		while (have_posts()) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'hero' );
-			get_template_part( 'template-parts/content', 'front-page' );
+			get_template_part('template-parts/content', 'hero');
+			if (is_user_logged_in()) :
+				get_template_part('template-parts/content', 'front-page');
+			endif;
 
 
-			/* If comments are open or we have at least one comment, load up the comment template.
+		/* If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;*/
@@ -34,8 +36,8 @@ get_header();
 
 
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 
 <?php
