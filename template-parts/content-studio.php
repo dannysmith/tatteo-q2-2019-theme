@@ -29,7 +29,7 @@
 	          echo $commission_term->name.' commission';
           endif; ?></p>
     </div>
-    <a class="get-in-touch white-link">Get In Touch</a>
+    <button class="get-in-touch open white-link" id="contact-button">Get In Touch</button>
 </section>
 <section class="hero-section">
     <div class="image-area-wrapper">
@@ -72,8 +72,7 @@
         endif; ?>
 					</ul>
         </div> <!-- artist style --->
-
-        <a class="get-in-touch white-link">Get In Touch</a> <!-- SET UP CONTENT FORM -->
+        <button class="get-in-touch open white-link" id="contact-button">Get In Touch</button>
     </div> <!-- hero side content --->
 </section>
 </div>
@@ -99,5 +98,12 @@
     </ul>
 </section>
 </section>
-
+<div class="popup-overlay">
+	<div class="popup-wrapper">
+	<div class="popup-content">
+		<button class="close-form headings-box">X</button>
+<?php echo do_shortcode( "[contact-form-7 id='1821' title='user-to-user']" ); ?>
+</div>
+</div>
+</div>
 </article><!-- #post-<?php the_ID(); ?> -->
