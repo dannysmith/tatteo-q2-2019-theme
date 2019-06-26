@@ -46,7 +46,7 @@ input[type="submit"] {
 		width:min-content;
 		padding: 1.5em 3em;
 		white-space: nowrap;
-		color:#fff;
+		color:$color__link-white;
 		border:none;
 		@include font-size;
 		cursor: pointer;
