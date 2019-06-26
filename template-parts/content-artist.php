@@ -16,74 +16,84 @@
 	<?php tatteo_post_thumbnail(); ?>
 
 	<div class="custom-post-page">
-<section class="content-header">
-    <div class="custom-post-header">
-        <h2><?php the_field( 'name' ); ?></h2>
-        <!-- ***** --->
-    </div>
-    <a class="get-in-touch white-link">Get In Touch</a>
-</section>
-<section class="hero-section">
-    <div class="image-area-wrapper">
-		<?php $profile_picture = get_field( 'profile_picture' ); ?>
-<?php if ( $profile_picture ) { ?>
-	<img src="<?php echo $profile_picture['url']; ?>" alt="<?php echo $profile_picture['alt']; ?>" />
-<?php } ?>
-            <h2 class="headings-box"><?php the_field( 'name' ); ?></h2> <!--Artist name --->
-            <div class="star-rating"></div> <!-- the rating --->
-            <p class="bio headings-box"><?php the_field( 'biography' ); ?></p> <!-- Bio --->
-    </div> <!-- image area wrapper --->
-    <div class="hero-side-content">
-        <div class="artist-style">
+		<section class="content-header">
+			<div class="custom-post-header">
+				<h2><?php the_field('name'); ?></h2>
+				<!-- ***** --->
+			</div>
+			<a class="get-in-touch white-link">Get In Touch</a>
+		</section>
+		<section class="hero-section">
+			<div class="image-area-wrapper">
+				<?php $profile_picture = get_field('profile_picture'); ?>
+				<?php if ($profile_picture) { ?>
+					<img src="<?php echo $profile_picture['url']; ?>" alt="<?php echo $profile_picture['alt']; ?>" />
+				<?php } ?>
+				<h2 class="headings-box"><?php the_field('name'); ?></h2>
+				<!--Artist name --->
+				<div class="star-rating"></div> <!-- the rating --->
+				<p class="bio headings-box"><?php the_field('biography'); ?></p> <!-- Bio --->
+			</div> <!-- image area wrapper --->
+			<div class="hero-side-content">
+				<div class="artist-style">
 					<h2 class="headings-box">Styles</h2>
-        <ul> <!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
-				<?php $art_style_terms = get_field( 'art_style' ); ?>
-<?php if ( $art_style_terms ): ?>
-	<?php foreach ( $art_style_terms as $art_style_term ): ?>
-		<?php echo '<li>'.$art_style_term->name.'<li>'; ?>
-	<?php endforeach; ?>
-<?php endif; ?>
+					<ul>
+						<!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->
+						<?php $art_style_terms = get_field('art_style'); ?>
+						<?php if ($art_style_terms) : ?>
+							<?php foreach ($art_style_terms as $art_style_term) : ?>
+								<?php echo '<li>' . $art_style_term->name . '<li>'; ?>
+							<?php endforeach; ?>
+						<?php endif; ?>
 					</ul>
 				</div> <!-- artist style --->
 				<div class="artist-social-media">
 					<h2 class="headings-box">Social</h2>
-					<?php if ( have_rows( 'social_media' ) ) : ?>
-					<ul>
-	<?php while ( have_rows( 'social_media' ) ) : the_row(); ?>
-		<li><a href="<?php echo the_sub_field('twitter'); ?>">Twitter</a></li>
-		<li><a href="<?php echo the_sub_field('facebook'); ?>">Facebook</a></li>
-		<li><a href="<?php echo the_sub_field('instagram'); ?>">Instagram</a></li>
-		<li><a href="<?php echo the_sub_field('portfolio'); ?>">Artist Portfolio</a></li>
-			<?php endwhile; ?>
-			</ul>
-<?php endif; ?>
-</div><!-- Artist Social Media -->
-        <a class="get-in-touch white-link">Get In Touch</a>
-    </div> <!-- hero side content --->
-</section>
-</div>
-<section class="gallery-section-wrapper">
-    <h2 class="gallery-title headings-box">Gallery</h2>
-    <ul class="images-grid grid-container">
-		<li><?php $image_one = get_field( 'image_one' ); ?>
-<?php if ( $image_one ) { ?>
-	<img src="<?php echo $image_one['url']; ?>" alt="<?php echo $image_one['alt']; ?>" />
-<?php } ?></li>
-<li class="image-border"><?php $image_two = get_field( 'image_two' ); ?>
-<?php if ( $image_two ) { ?>
-	<img src="<?php echo $image_two['url']; ?>" alt="<?php echo $image_two['alt']; ?>" />
-<?php } ?></li>
-<li><?php $image_three = get_field( 'image_three' ); ?>
-<?php if ( $image_three ) { ?>
-	<img src="<?php echo $image_three['url']; ?>" alt="<?php echo $image_three['alt']; ?>" />
-<?php } ?></li>
-<li><?php $image_four = get_field( 'image_four' ); ?>
-<?php if ( $image_four ) { ?>
-	<img src="<?php echo $image_four['url']; ?>" alt="<?php echo $image_four['alt']; ?>" />
-<?php } ?></li>
-    </ul>
-</section>
-</section>
+					<?php if (have_rows('social_media')) : ?>
+						<ul>
+							<?php while (have_rows('social_media')) : the_row(); ?>
+								<?php if (!empty(the_sub_field('twitter'))) : ?>
+									<li><a href="<?php echo the_sub_field('twitter'); ?>">Twitter</a></li>
+								<?php endif; ?>
+								<?php if (!empty(the_sub_field('facebook'))) : ?>
+									<li><a href="<?php echo the_sub_field('facebook'); ?>">Facebook</a></li>
+								<?php endif; ?>
+								<?php if (!empty(the_sub_field('instagram'))) : ?>
+									<li><a href="<?php echo the_sub_field('instagram'); ?>">Instagram</a></li>
+								<?php endif; ?>
+								<?php if (!empty(the_sub_field('portfolie'))) : ?>
+									<li><a href="<?php echo the_sub_field('portfolio'); ?>">Artist Portfolio</a></li>
+								<?php endif; ?>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+				</div><!-- Artist Social Media -->
+				<a class="get-in-touch white-link">Get In Touch</a>
+			</div> <!-- hero side content --->
+		</section>
+	</div>
+	<section class="gallery-section-wrapper">
+		<h2 class="gallery-title headings-box">Gallery</h2>
+		<ul class="images-grid grid-container">
+			<li><?php $image_one = get_field('image_one'); ?>
+				<?php if ($image_one) { ?>
+					<img src="<?php echo $image_one['url']; ?>" alt="<?php echo $image_one['alt']; ?>" />
+				<?php } ?></li>
+			<li class="image-border"><?php $image_two = get_field('image_two'); ?>
+				<?php if ($image_two) { ?>
+					<img src="<?php echo $image_two['url']; ?>" alt="<?php echo $image_two['alt']; ?>" />
+				<?php } ?></li>
+			<li><?php $image_three = get_field('image_three'); ?>
+				<?php if ($image_three) { ?>
+					<img src="<?php echo $image_three['url']; ?>" alt="<?php echo $image_three['alt']; ?>" />
+				<?php } ?></li>
+			<li><?php $image_four = get_field('image_four'); ?>
+				<?php if ($image_four) { ?>
+					<img src="<?php echo $image_four['url']; ?>" alt="<?php echo $image_four['alt']; ?>" />
+				<?php } ?></li>
+		</ul>
+	</section>
+	</section>
 
 
 
