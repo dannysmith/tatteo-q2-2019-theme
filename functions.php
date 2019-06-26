@@ -41,7 +41,7 @@ if ( ! function_exists( 'tatteo_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		
+
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'tatteo' ),
@@ -131,10 +131,12 @@ function tatteo_scripts() {
 	wp_enqueue_style( 'inhabitents-fontawesome', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css', array());
 
 	wp_enqueue_script( 'tatteo-toggle-menu', get_template_directory_uri() . '/js/toggle-menu.js', array(), '20151215', true );
-	
+
 	wp_enqueue_script( 'tatteo-search-reveal', get_template_directory_uri() . '/js/search-reveal.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'tatteo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'tatteo-popup-form', get_template_directory_uri() . '/js/popup-form.js', array('jquery'), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
