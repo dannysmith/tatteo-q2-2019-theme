@@ -16,7 +16,7 @@
 	<?php tatteo_post_thumbnail(); ?>
 
 	<div class="custom-post-page">
-<section class="content-header">
+<section class="content-header content-padding">
     <div class="custom-post-header">
         <h2><?php the_field( 'name' ); ?></h2>
         <!-- ***** --->
@@ -33,7 +33,7 @@
             <div class="star-rating"></div> <!-- the rating --->
             <p class="bio headings-box"><?php the_field( 'biography' ); ?></p> <!-- Bio --->
     </div> <!-- image area wrapper --->
-    <div class="hero-side-content">
+    <div class="hero-side-content content-padding">
         <div class="artist-style">
 					<h2 class="headings-box">Styles</h2>
         <ul> <!-- This will currently display ANY custom taxonomies within the art style section, change later so it only displays the ones that the artist has chosen -->

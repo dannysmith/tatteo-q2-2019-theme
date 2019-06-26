@@ -18,7 +18,7 @@
 
 
 <div class="custom-post-page">
-<section class="content-header">
+<section class="content-header content-padding">
     <div class="custom-post-header">
         <h2><?php the_field( 'studio_name' ); ?></h2>
         <p class="CPT-location"><?php the_field( 'city' )?>, <?php the_field( 'country' ) ?><p>
@@ -46,7 +46,7 @@
 } ?>
             <p class="bio headings-box"><?php the_field( 'description' ); ?></p> <!-- Bio --->
     </div> <!-- image area wrapper --->
-    <div class="hero-side-content">
+    <div class="hero-side-content content-padding">
         <div class="art-style">
         <h2 class="headings-box">Styles</h2>
         <ul>
