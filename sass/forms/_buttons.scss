@@ -32,3 +32,22 @@ input[type="submit"] {
 		font-size: 1rem;
 		text-transform: uppercase;
 	}
+
+.see-more,
+.get-in-touch,
+.get-tickets {
+    background-image: url(../../img-artist/link-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+		justify-content: center;
+		width:min-content;
+		padding: 1.5em 3em;
+		white-space: nowrap;
+		color:#fff;
+		border:none;
+		@include font-size;
+		cursor: pointer;
+}

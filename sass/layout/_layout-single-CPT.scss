@@ -105,19 +105,6 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 		height: 76px;
 	}
 }
-.get-in-touch,
-.get-tickets {
-    background-image: url(../../img-artist/link-button.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-		justify-content: center;
-		width:min-content;
-		padding: 2em 4em;
-		white-space: nowrap;
-}
 
 .event-side-content{
 	@extend .hero-side-content;
