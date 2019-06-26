@@ -21,7 +21,7 @@
         <h2><?php the_field( 'name' ); ?></h2>
         <!-- ***** --->
     </div>
-    <a class="get-in-touch white-link">Get In Touch</a>
+	<button class="get-in-touch open white-link" id="contact-button">Get In Touch</button>
 </section>
 <section class="hero-section">
     <div class="image-area-wrapper">

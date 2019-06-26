@@ -35,7 +35,7 @@
 	endwhile;
 	?>
   </div> <!-- Featured Gallery -->
-  <a class="load-more get-in-touch white-link">Load More</a>
+	<a href="<?php echo get_site_url().'/artist/'?>" class="get-in-touch see-more white-link">See More</a>
 </section>
 <section class="featured-studio featured-section">
   <h2 class="featured-title headings-box">Featured Studios</h2>
@@ -53,7 +53,7 @@
 	endwhile;
 	?>
   </div> <!-- Featured Gallery -->
-  <a class="load-more get-in-touch white-link">Load More</a>
+	<a href="<?php echo get_site_url().'/studio/'?>" class="get-in-touch see-more white-link">See More</a>
 </section>
 </section> <!-- Featured Section Wrapper -->
 	</div><!-- .entry-content -->
