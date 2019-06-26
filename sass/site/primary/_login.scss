@@ -1,0 +1,16 @@
+#loginform {
+	box-shadow: none;
+	@include black-border;
+	#wp-submit {
+		border: none;
+		border-radius: 0;
+		background: black;
+		font-family: 'Roboto';
+		box-shadow: none;
+		text-shadow: none;
+	}
+	#user_login,
+	#user_password {
+		background-color: white;
+	}
+}
