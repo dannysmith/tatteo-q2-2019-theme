@@ -15,9 +15,7 @@
 	img {
 		width: 50%;
 		object-fit: cover;
-		border-right: 6px solid #000;
 	}
-	@include black-border-thick;
 
 	.search-result-text {
 		width: 50%;
@@ -25,6 +23,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 0.5em 1.5em;
+		@include black-border;
 
 		.search-result-header {
 			h2 {
