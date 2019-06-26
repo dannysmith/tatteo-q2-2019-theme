@@ -1,6 +1,7 @@
 @import '../variables-site/variables-site';
 
 .popup-overlay {
+  z-index:101;
   display: none;
   position:fixed;
   top:0;
