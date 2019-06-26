@@ -18,7 +18,8 @@
 	<div class="custom-post-page">
 <section class="content-header">
     <div class="custom-post-header">
-        <h2><?php the_field( 'name' ); ?></h2>
+		<h2><?php the_field( 'name' ); ?></h2>
+		<p class="CPT-location"><?php the_field( 'city' )?>, <?php the_field( 'country' ) ?><p>
         <!-- ***** --->
     </div>
 	<button class="get-in-touch open white-link" id="contact-button">Get In Touch</button>
