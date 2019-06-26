@@ -13,15 +13,11 @@
 
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer">
-		<section class="subscription-section">
-			<h2 class="subscribe">Subscribe to our Newsletter</h2>
-			<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-   	 		<div>
-      		<input type="text" value="" name="s" id="subscribe" placeholder="..try another search" />
-      		<input type="submit" id="searchsubmit" value="Submit" />
-    		</div>
-			</form>
-	</section><!-- SUBSCIPTION SECTION -->
+
+			<!-- SUBSCIPTION SECTION -->
+	<?php echo do_shortcode( "[mc4wp_form id='1825']" ); ?>
+	<!-- SUBSCIPTION SECTION -->
+
 		<div class="wrapper main-footer">
 			<div class="site-info">
 				<div class="footer-logo">
