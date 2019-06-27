@@ -31,7 +31,9 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 	height: min-content;
 	img { // ALL hero images
 		max-width: 700px;
-		max-height:600px;
+		max-height:500px;
+		object-fit: contain;
+		object-position: center;
 	}
 	h2 { // ALL headers
 		position: absolute;
@@ -58,6 +60,7 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 	p { // ARTIST and STUDIO bio only
 		font-size: 0.8rem;
 		width: 500px;
+		max-height:200px;
 		position: absolute;
 		top: 100%;
 		left: 10%;
@@ -78,7 +81,14 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 }
 
 .art-style {
-	margin-top: 3vh;
+margin-top: 15px;
+display:flex;
+flex-direction: column;
+justify-content: right;
+overflow:scroll;
+h2 {
+	margin-left:255px;
+}
 	li {
 		margin-left:auto;
 		margin-right:0;
@@ -87,7 +97,10 @@ div.image-area-wrapper { 	//this styles the image and the text on top of it
 }
 
 .tools {
-	margin-top: 3vh;
+	margin-top: 15px;
+	h2 {
+		margin-left:150px;
+	}
 	li {
 		margin-left:auto;
 		margin-right:0;
