@@ -3,185 +3,6 @@
     "title": "Studio",
     "fields": [
         {
-            "key": "field_5d10b3471872d",
-            "label": "Studio Name",
-            "name": "studio_name",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "Name your studio here",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d10b36b1872e",
-            "label": "City",
-            "name": "city",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "Enter your city\/town",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d10b3851872f",
-            "label": "Country",
-            "name": "country",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "Your country of residence",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d10b55818737",
-            "label": "Your Contact Email",
-            "name": "email",
-            "type": "email",
-            "instructions": "Add an email you wish to be contacted by if some requests to get in touch. (This will not be publicly visible to others on your page.)",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_5d10b49418733",
-            "label": "Description",
-            "name": "description",
-            "type": "textarea",
-            "instructions": "Add a short description to tell others about your studio.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": 400,
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_5d10b39e18730",
-            "label": "Art Styles",
-            "name": "art_style",
-            "type": "taxonomy",
-            "instructions": "Add all the art styles your studio provides.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "art_style",
-            "field_type": "checkbox",
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 0,
-            "return_format": "object",
-            "multiple": 0,
-            "allow_null": 0
-        },
-        {
-            "key": "field_5d10b3fd18732",
-            "label": "Tools",
-            "name": "tools",
-            "type": "taxonomy",
-            "instructions": "Add all the tools your provide to your artists.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "tools",
-            "field_type": "checkbox",
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 0,
-            "return_format": "object",
-            "multiple": 0,
-            "allow_null": 0
-        },
-        {
-            "key": "field_5d10b3ee18731",
-            "label": "Commission",
-            "name": "commission",
-            "type": "taxonomy",
-            "instructions": "Select how much commission you offer visiting artists.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "comission",
-            "field_type": "select",
-            "allow_null": 1,
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 0,
-            "return_format": "object",
-            "multiple": 0
-        },
-        {
-            "key": "field_5d10b59818738",
-            "label": "Accommodation",
-            "name": "accommodation",
-            "type": "true_false",
-            "instructions": "Do you provide accommodation to visiting artists?",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_5d10b4ee18734",
             "label": "Feature Image",
             "name": "featured_image",
@@ -204,6 +25,43 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d10b55818737",
+            "label": "Your Contact Email",
+            "name": "email",
+            "type": "email",
+            "instructions": "Add an email you wish to be contacted by if some requests to get in touch. (This will not be publicly visible to others on your page.)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d10b59818738",
+            "label": "Accommodation",
+            "name": "accommodation",
+            "type": "true_false",
+            "instructions": "Do you provide accommodation to visiting artists?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5d12205817732",
@@ -300,6 +158,148 @@
             "max_height": 900,
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d10b3471872d",
+            "label": "Studio Name",
+            "name": "studio_name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Name your studio here",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d10b36b1872e",
+            "label": "City",
+            "name": "city",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Enter your city\/town",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d10b3851872f",
+            "label": "Country",
+            "name": "country",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Your country of residence",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d10b39e18730",
+            "label": "Art Styles",
+            "name": "art_style",
+            "type": "taxonomy",
+            "instructions": "Add all the art styles your studio provides.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "art_style",
+            "field_type": "checkbox",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5d10b3fd18732",
+            "label": "Tools",
+            "name": "tools",
+            "type": "taxonomy",
+            "instructions": "Add all the tools your provide to your artists.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "tools",
+            "field_type": "checkbox",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5d10b3ee18731",
+            "label": "Commission",
+            "name": "commission",
+            "type": "taxonomy",
+            "instructions": "Select how much commission you offer visiting artists.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "comission",
+            "field_type": "select",
+            "allow_null": 1,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_5d10b49418733",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "Add a short description to tell others about your studio.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 400,
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -312,8 +312,8 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
-    "style": "seamless",
+    "position": "acf_after_title",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -334,5 +334,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561473810
+    "modified": 1561577498
 }

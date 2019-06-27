@@ -3,25 +3,6 @@
     "title": "Artist",
     "fields": [
         {
-            "key": "field_5d10aeea78746",
-            "label": "Your Name",
-            "name": "name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5d10b7673af58",
             "label": "Profile Picture",
             "name": "profile_picture",
@@ -46,66 +27,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_5d10b138f35f1",
-            "label": "City",
-            "name": "city",
-            "type": "text",
-            "instructions": "Enter your nearest city\/town.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d10b1c8f35f2",
-            "label": "Country",
-            "name": "country",
-            "type": "text",
-            "instructions": "Enter your country of residence.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d0a3ed0f9a24",
-            "label": "Art Styles",
-            "name": "art_style",
-            "type": "taxonomy",
-            "instructions": "Choose some art styles you work with:",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "art_style",
-            "field_type": "checkbox",
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 0,
-            "return_format": "object",
-            "multiple": 0,
-            "allow_null": 0
-        },
-        {
             "key": "field_5d10bba4e4257",
             "label": "Social Media",
             "name": "social_media",
@@ -120,6 +41,22 @@
             },
             "layout": "block",
             "sub_fields": [
+                {
+                    "key": "field_5d10bc9be425b",
+                    "label": "Instagram",
+                    "name": "instagram",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
                 {
                     "key": "field_5d10bcbbe425c",
                     "label": "Twitter",
@@ -153,22 +90,6 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5d10bc9be425b",
-                    "label": "Instagram",
-                    "name": "instagram",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
                     "key": "field_5d10bcd8e425e",
                     "label": "Your Portfolio",
                     "name": "portfolio",
@@ -185,25 +106,6 @@
                     "placeholder": ""
                 }
             ]
-        },
-        {
-            "key": "field_5d10af0578748",
-            "label": "Biography",
-            "name": "biography",
-            "type": "textarea",
-            "instructions": "Add a short bit about yourself to help other get to know you.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": 400,
-            "rows": "",
-            "new_lines": ""
         },
         {
             "key": "field_5d121cf2b4c61",
@@ -300,6 +202,104 @@
             "max_height": 500,
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d0a3ed0f9a24",
+            "label": "Art Styles",
+            "name": "art_style",
+            "type": "taxonomy",
+            "instructions": "Choose some art styles you work with:",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "art_style",
+            "field_type": "checkbox",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5d10aeea78746",
+            "label": "Your Name",
+            "name": "name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d10af0578748",
+            "label": "Biography",
+            "name": "biography",
+            "type": "textarea",
+            "instructions": "Add a short bit about yourself to help other get to know you.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 400,
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d10b138f35f1",
+            "label": "City",
+            "name": "city",
+            "type": "text",
+            "instructions": "Enter your nearest city\/town.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d10b1c8f35f2",
+            "label": "Country",
+            "name": "country",
+            "type": "text",
+            "instructions": "Enter your country of residence.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -313,7 +313,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -334,5 +334,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561473826
+    "modified": 1561577554
 }
