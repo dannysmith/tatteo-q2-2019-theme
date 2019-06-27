@@ -200,10 +200,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": 400,
+            "placeholder": "This is my artist page. Get in contact with me by clicking 'Get In Touch'.",
+            "maxlength": 500,
             "rows": "",
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_5d121cf2b4c61",
@@ -334,5 +334,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561473826
+    "modified": 1561629253
 }
