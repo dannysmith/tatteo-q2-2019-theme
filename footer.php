@@ -14,9 +14,13 @@
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer">
 
-			<!-- SUBSCIPTION SECTION -->
-	<?php echo do_shortcode( "[mc4wp_form id='1825']" ); ?>
+
 	<!-- SUBSCIPTION SECTION -->
+	<div class="subscription-signup">
+		<p>Keep in Touch</p>
+		<?php echo do_shortcode( "[mc4wp_form id='2030']" ); ?>
+	</div>
+	<!-- /SUBSCIPTION SECTION -->
 
 		<div class="wrapper main-footer">
 			<div class="site-info">

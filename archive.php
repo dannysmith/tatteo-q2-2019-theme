@@ -21,16 +21,16 @@ get_header();
         <?php
         $archive_image = get_template_directory_uri() . '/img/2.png';
         if ($queried_object->name === 'artist') {
-          $archive_image = get_template_directory_uri() . '/img/3.png';
+          $archive_image = get_field('hero_image_artists', 'option');
           echo '<img class="archive-hero-image" src="' . $archive_image . '">';
         } elseif ($queried_object->name === 'studio') {
-          $archive_image = get_template_directory_uri() . '/img/4.png';;
+          $archive_image = get_field('hero_image_studios', 'option');
           echo '<img class="archive-hero-image" src="' . $archive_image . '">';
         } elseif ($queried_object->name === 'guest_spot') {
           $archive_image = get_template_directory_uri() . '/img/5.png';
           echo '<img class="archive-hero-image" src="' . $archive_image . '">';
         } elseif ($queried_object->name === 'event') {
-          $archive_image = get_template_directory_uri() . '/img/6.png';
+          $archive_image = get_field('hero_image_events', 'option');
           echo '<img class="archive-hero-image" src="' . $archive_image . '">';
         } else {
           return;

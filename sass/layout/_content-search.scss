@@ -5,6 +5,11 @@
 	max-width: 70%;
 	margin: 2em auto;
 	height: 250px;
+	
+	@media only screen and (max-width: 750px) {
+		 max-width: 90%;
+	}
+	
 	.no-photo {
 		text-align: center;
 		display: flex;
@@ -42,4 +47,41 @@
 			}
 		}
 	}
+}
+
+.search-result-text {
+	p {
+		&.studio-name {
+			font-weight: 700;
+		}
+		
+		&.studio-country {
+			
+		}
+		
+		&.studio-commission {
+			font-style: italic;
+			margin-bottom: $layout__indent-small !important;
+		}			
+	}
+}
+
+.event-image-area {
+	img {
+		max-width: 50%;
+		
+		@media only screen and (min-width: 700px) {
+			max-width: 100%; 
+		}
+	}
+}
+
+.cpt-event-meta {
+	text-align: right;
+	padding-right: 	$layout__indent-xlarge;
+	width: 100%;
+}
+
+.event-secondary-meta {
+	padding-left: $layout__indent-xlarge;
 }

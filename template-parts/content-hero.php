@@ -32,11 +32,12 @@
 				<?php	
 				 	// loop through the headlines
 				    while ( have_rows('headlines') ) : the_row(); ?>
-			
+
+			<?php if( get_sub_field('headline') ): ?>
 				    <span class="hero-headline">
 				    	<?php the_sub_field('headline'); ?>
 				    </span>
-			
+			<?php endif; ?>
 				<?php
 					endwhile; ?>
 			</div>

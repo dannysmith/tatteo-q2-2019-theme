@@ -136,17 +136,26 @@ h2 {
 }
 
 .images-grid {
-	height: 300px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 1.5rem;
 	margin: 0;
 	padding: 0;
-  z-index:-4;
-  margin-top:100px;
-  position:relative;
+	z-index:-4;
+	position:relative;
+	
+	@media only screen and (max-width: 900px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	@media only screen and (max-width: 700px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	
 	> li {
 		height: 300px;
+		
 		> img {
 			height: 100%;
 			object-fit: cover;
@@ -156,19 +165,81 @@ h2 {
 
 .gallery-section-wrapper {
 	position: relative;
-	margin-bottom:200px;
+	margin-bottom:$layout__indent-xlarge;
 }
 
 .gallery-title{
-	position: absolute;
-  top: 0;
-  left: 20%;
-	transform: translate(0, -90%);
-	font-size: 3rem;
+	font-size: 2.6rem;
 	color:$color__border;
 	z-index: -2;
+	margin: $layout__indent-xlarge $layout__indent-xlarge calc(-#{$layout__indent-xlarge} * 1.5) 7%;
 }
 
 .image-border{
 	border:4px solid $color__border;
+}
+
+.custom-post-header {
+	background-size: cover;
+	background-position: center center;
+	height: 70vh;
+	position: relative;
+	margin-bottom: $layout__indent-xlarge;
+}
+
+.custom-post-hero-meta {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	background-color: white;
+	padding: $layout__indent-small $layout__indent-xlarge;
+	@include black-border();
+	
+	.commission{
+		font-size: 11px;
+		font-style: italic;
+	}
+	
+	h2 {
+		margin-top: $layout__indent-small;
+	}
+}
+
+.studio-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	&-image {
+		width: 50%;
+		background-position: center center;
+		background-size: cover;
+		
+		@media only screen and (max-width: 800px) {
+			width: 100%;
+			min-height: 330px;
+			order: 2;
+			margin-top: $layout__indent-small;
+		}
+	}
+	
+	&-meta {
+		width: 50%;
+		padding-left: $layout__indent-xlarge;
+		
+		@media only screen and (max-width: 800px) {
+			width: 100%;
+		}
+				
+		ul {
+			padding-left: 0;
+			margin-left: 0;
+		}
+	}
+	
+	&-bio {
+		font-size: 14px;
+		letter-spacing: 0;
+		padding-right: $layout__indent-xlarge * 2;
+	}
 }

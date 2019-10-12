@@ -38,3 +38,46 @@ label {
 	font-weight: bolder;
 
 }
+
+.subscription-signup {
+	background-color: $color__background-pre;
+	padding: $layout__indent-xlarge;
+	color: $color__text-main;
+	
+	form {
+		label {
+			font-size: 0;
+			line-height: 0;
+			
+			input {
+				display: block;
+				margin: 10px auto;
+				width: 33%;
+				text-align: center;
+				
+				@media only screen and (max-width: 900px) {
+					width: 50%;
+				}
+				
+				@media only screen and (max-width: 600px) {
+					width: 90%;
+				}
+			}
+		}
+	}
+	
+	p {
+		color: $color__text-main;
+		text-align: center;
+		font-size: 22px;
+		font-weight: 700;
+		margin: 0;
+	}
+}
+
+.page-content {
+	input[type=submit] {
+		display: block;
+		margin: 0 auto;
+	}
+}

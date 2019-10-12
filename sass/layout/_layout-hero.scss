@@ -2,7 +2,7 @@
 
 .hero {
 	min-height: calc(100vh - 100px);
-	margin: 0 -15px;
+	margin: 0;
 	padding: 5% 15px 15px;
 	background-size: cover;
 	background-position: center center;
@@ -11,6 +11,7 @@
 	flex-wrap: wrap;
 	align-content: space-between;
 	border-bottom: 4px solid #000;
+	max-width: 100%;
 
 	&-headlines {
 		display: flex;
